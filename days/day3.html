@@ -1,0 +1,209 @@
+<div class="day3">
+	<div class="container">
+		<div class="sky"></div>
+		<div class="ground"></div>
+		<div class="sun"></div>
+		<div class="rect-left"></div>
+		<div class="rect-right"></div>
+		<div class="shadow"></div>
+	</div>
+</div>
+<style>
+	.day3 {
+		background-color: black;
+	}
+
+	.day3 .container {
+		width: 70%;
+		height: 70%;
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+		/* animation: animate-container 6s ease-out infinite; */
+	}
+	.day3 .sky {
+		width: 100%;
+		height: 65%;
+		animation: animate-sky 6s ease-out infinite;
+	}
+
+	.day3 .ground {
+		width: 100%;
+		height: 35%;
+		background-color: #ffed8d;
+		animation: animate-ground 6s ease-out infinite;
+	}
+
+	.day3 .sun {
+		width: 16%;
+		height: 16%;
+		background-color: gold;
+		border-radius: 50%;
+		position: absolute;
+		top: 8%;
+		left: 42%;
+		animation: animate-sun 6s ease-out infinite;
+	}
+
+	.day3 .rect-left,
+	.day3 .rect-right {
+		height: 32%;
+		width: 60%;
+		/* background-color: white; */
+		position: absolute;
+		top: 34%;
+		left: 20%;
+	}
+
+	.day3 .rect-left {
+		background-color: rgb(255, 255, 255);
+		clip-path: polygon(50% 0, 65% 100%, 0 100%);
+		animation: animate-rect-left 6s ease-out infinite;
+	}
+
+	.day3 .rect-right {
+		background-color: rgb(168, 168, 168);
+		clip-path: polygon(50% 0, 100% 100%, 65% 100%);
+		animation: animate-rect-right 6s ease-out infinite;
+	}
+
+	.day3 .shadow {
+		width: 100%;
+		height: 20%;
+		position: absolute;
+		top: 66%;
+		clip-path: polygon(80% 0, 100% 20%, 20% 0%);
+		animation: animate-shadow 6s ease-out infinite;
+	}
+
+	@keyframes animate-sun {
+		0% {
+			transform: rotate(-100deg);
+			background-color: rgb(255, 166, 0);
+			transform-origin: -20% 400%;
+		}
+		40% {
+			transform: rotate(-20deg);
+			transform-origin: 10% 400%;
+			background-color: rgb(251, 255, 0);
+			animation-timing-function: linear;
+		}
+        70% {
+            transform: rotate(40deg);
+			transform-origin: 45% 400%;
+			background-color: rgb(255, 217, 0);
+			animation-timing-function: linear;
+        }
+		100% {
+			transform: rotate(120deg);
+			transform-origin: 110% 400%;
+			background-color: rgb(255, 0, 0);
+			animation-timing-function: linear;
+		}
+	}
+
+	@keyframes animate-sky {
+		0% {
+			background-color: black;
+		}
+		30%,
+		60% {
+			background-color: aqua;
+		}
+		80% {
+			background-color: rgba(0, 255, 255, .4);
+		}
+		100% {
+			background-color: rgba(0, 255, 255, 0);
+		}
+	}
+    @keyframes animate-ground {
+		0% {
+			background-color: black;
+		}
+		30%,
+		60% {
+			background-color: rgb(255, 237, 141);
+		}
+		80% {
+			background-color: rgba(255, 237, 141, .4);
+		}
+		100% {
+			background-color: rgba(0, 255, 255, 0);
+		}
+	}
+
+	@keyframes animate-rect-left {
+		0% {
+			background-color: black;
+		}
+		20%,
+		50% {
+			background-color: rgb(255, 255, 255);
+		}
+		60% {
+			background-color: rgb(216, 216, 216);
+		}
+		100% {
+			background-color: black;
+		}
+	}
+
+	@keyframes animate-rect-right {
+		0% {
+			background-color: black;
+		}
+		40% {
+			background-color: rgb(204, 204, 204);
+		}
+		50%,
+		60% {
+			background-color: rgb(255, 255, 255);
+		}
+        80% {
+			background-color: rgb(122, 121, 121);
+        }
+		100% {
+			background-color: black;
+		}
+	}
+
+	@keyframes animate-shadow {
+		0% {
+			clip-path: polygon(80% 0, 100% 0%, 20% 0%);
+			background-color: rgb(0, 0, 0);
+		}
+		40% {
+			clip-path: polygon(80% 0, 100% 100%, 20% 0%);
+			background-color: rgba(128, 128, 128, 0.3);
+			animation-timing-function: linear;
+		}
+		50% {
+			clip-path: polygon(80% 0, 50% 60%, 20% 0%);
+			animation-timing-function: linear;
+		}
+		60% {
+			clip-path: polygon(80% 0, 10% 40%, 20% 0%);
+			animation-timing-function: linear;
+			background-color: rgba(94, 94, 94, 0.5);
+		}
+		100% {
+			clip-path: polygon(80% 0, 0% 0%, 20% 0%);
+			animation-timing-function: linear;
+			background-color: rgb(0, 0, 0);
+		}
+	}
+
+	@keyframes animate-container {
+		0% {
+			opacity: 0;
+		}
+		40%,
+		60% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+</style>

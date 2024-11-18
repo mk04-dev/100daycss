@@ -1,0 +1,116 @@
+<div class="day6">
+	<div class="container">
+		<div class="left">
+			<div class="image">
+				<div class="circle-1"></div>
+				<div class="circle-2"></div>
+				<img src="https://100dayscss.com/codepen/jessica-potter.jpg" alt="avt" />
+			</div>
+			<div>
+				<div class="name">Jessica Potter</div>
+				<div class="job">Visual Artist</div>
+			</div>
+			<div>
+				<button>Follow</button>
+				<button>Message</button>
+			</div>
+		</div>
+		<div class="right">
+			<div class="right-item">
+				<div>523</div>
+				<div>Posts</div>
+			</div>
+			<div class="right-item">
+				<div>1387</div>
+				<div>Likes</div>
+			</div>
+			<div class="right-item">
+				<div>146</div>
+				<div>Follower</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	.day6 {
+		background: linear-gradient(45deg, #eebe6c, #ca7c4e);
+	}
+	.day6 .container {
+		width: 80%;
+		height: 80%;
+		display: flex;
+		background-color: white;
+	}
+	.day6 .left {
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10%;
+	}
+	.day6 .right {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+	}
+	.day6 .left .image {
+		position: relative;
+	}
+	.day6 .left .image > * {
+		border-radius: 50%;
+	}
+
+	.day6 .left .image img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.day6 .image:hover .circle-1 {
+		rotate: 360deg;
+	}
+    .day6 .image:hover .circle-2 {
+		rotate: -180deg;
+
+    }
+
+	.day6 .circle-1,
+	.day6 .circle-2 {
+		position: absolute;
+		border: 1px solid;
+		transition: rotate 1s ease-in-out;
+		border-color: #af690e transparent #af690e #af690e;
+	}
+	.day6 .circle-1 {
+		width: 70px;
+		height: 70px;
+		top: -6px;
+		left: -6px;
+	}
+
+	.day6 .circle-2 {
+		width: 64px;
+		height: 64px;
+		top: -3px;
+		left: -3px;
+        rotate: 180deg;
+	}
+	.day6 .right-item {
+		flex: 1;
+		background-color: #fde5c4;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.5s;
+		color: #af690e;
+	}
+	.day6 .right-item:hover {
+		background-color: #dfc5a3;
+	}
+	.day6 .right-item > div:first-child {
+		font-weight: bold;
+	}
+</style>

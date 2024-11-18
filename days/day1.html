@@ -1,0 +1,71 @@
+<div class="day1">
+	<div class="container">
+		<div class="number-container">
+			<div class="one-1"></div>
+			<div class="one-2"></div>
+			<div class="zero-1"></div>
+			<div class="zero-2"></div>
+		</div>
+		<div class="text-lg">DAYS</div>
+		<div class="text-md">CSS CHALLENGE</div>
+	</div>
+</div>
+<style>
+	.day1 {
+		background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+		flex-direction: column;
+		font-family: "Courier New", "Courier", sans-serif;
+		font-weight: bold;
+		color: white;
+	}
+	.day1 .text-lg {
+		font-size: 5rem;
+		line-height: 3.5rem;
+	}
+	.day1 .text-md {
+		font-size: 1.5rem;
+		line-height: 1rem;
+	}
+	.number-container {
+		position: relative;
+		height: 6rem;
+	}
+	.day1 .one-1,
+	.day1 .one-2 {
+		position: absolute;
+		width: 1.4rem;
+		top: 0;
+		background-color: white;
+		border-radius: 4px;
+	}
+	.day1 .one-1 {
+		height: 2.6rem;
+		left: 0;
+		rotate: 45deg;
+	}
+	.day1 .one-2 {
+		height: 100%;
+		top: 0;
+		left: 0.7rem;
+        box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.4);
+        z-index: 3;
+	}
+    .day1 .zero-1,
+    .day1 .zero-2 {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 1.4rem solid white;
+    }
+    .day1 .zero-1 {
+        left: 1.2rem;
+        z-index: 2;
+        box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.4);
+    }
+    .day1 .zero-2 {
+        left: 6.2rem;
+    }
+</style>
