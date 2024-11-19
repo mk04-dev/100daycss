@@ -1,0 +1,228 @@
+.day7 {
+	background-color: #264057;
+}
+.day7 .container {
+	width: 75%;
+	height: 75%;
+	position: relative;
+}
+
+.day7 .container.show-menu .menu {
+	transform: scale(0.9) translateX(-2rem);
+}
+
+.day7 .container.show-menu .card {
+	transform: translateX(56%);
+}
+
+.day7 .menu,
+.day7 .card {
+	box-shadow: 4px 5px 8px 4px rgba(0, 0, 0, 0.2);
+	transition: transform 0.8s ease-in-out;
+}
+.day7 .menu {
+	height: 100%;
+	list-style: none;
+	background-color: rgb(67, 98, 125);
+	color: rgb(149, 161, 190);
+	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	transform: scale(0.9);
+}
+
+.day7 .menu > li {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition-property: background-color, color;
+	transition-duration: 0.4s;
+}
+.day7 .menu > li:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: white;
+}
+
+.day7 .menu > li > i {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+}
+.day7 .menu > li > span {
+	flex: 10;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.day7 .card {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.25rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+.day7 .card-header {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #5f98cd;
+	padding: 0.75rem 1rem;
+	position: relative;
+}
+.day7 .header-name {
+	flex: 1;
+	color: white;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+.day7 .search-icon {
+	color: #b2daff;
+	font-size: 1.3em;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+.day7 .search-icon:hover {
+	color: white;
+}
+.day7 .header-icon {
+	width: 1.8rem;
+	height: 1.8em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+.day7 .header-icon > * {
+	background-color: #b2daff;
+	transition: background-color 0.3s;
+}
+
+.day7 .header-icon:hover > * {
+	background-color: white;
+}
+
+.day7 .header-icon .line-1,
+.day7 .header-icon .line-2 {
+	width: 100%;
+	height: 0.1875rem;
+	border-radius: 15px;
+}
+.day7 .header-icon .circle {
+	width: 0.5rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	position: absolute;
+	top: 0.2rem;
+	right: -2px;
+	border: 2px solid #5f98cd;
+}
+.day7 .search-input {
+	position: absolute;
+	left: 0.8rem;
+	padding: 0.5rem 1rem;
+	border-radius: 15px;
+	width: 64%;
+	border: unset;
+	outline: unset;
+	transition-property: transform, opacity;
+	transition-duration: 0.4s;
+	pointer-events: none;
+	opacity: 0;
+	transform: translateX(1rem);
+}
+
+.day7 .card-header.searching .search-input {
+	opacity: 1;
+	transform: translateX(0);
+	pointer-events: all;
+}
+.day7 .card-body {
+	flex: 1;
+	background-color: #ffffff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.day7 .card-content {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+.day7 .body-line {
+	position: absolute;
+	height: 100%;
+	width: 0.25rem;
+	background-color: #ebebeb;
+	top: 0;
+	left: 1.8rem;
+}
+.noti-item {
+	position: relative;
+	cursor: pointer;
+	margin: 1rem 0 1rem 1.8rem;
+	opacity: 0;
+	animation: slide-up 0.6s ease-in-out forwards;
+}
+@keyframes slide-up {
+	0% {
+		transform: translateY(2.5rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.day7 .noti-item-circle {
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	top: 0.25rem;
+	left: -0.25rem;
+	border-radius: 50%;
+	background-color: white;
+	border: 2px solid #5f98cd;
+	box-shadow: 0 0 2px 4px #ffffff;
+}
+.day7 .noti-item-content {
+	padding-left: 1.25rem;
+	color: #7c7c7c;
+}
+
+.noti-item-content:hover * {
+	color: #5f98cd !important;
+}
+
+.day7 .noti-item-content-time {
+	font-size: 0.7em;
+}
+
+.day7 .noti-item-content-user {
+	font-weight: bold;
+	color: #808080;
+}
+
+.day7 ::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+.day7 ::-webkit-scrollbar-thumb {
+	background: #b3b3b3;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+.day7 ::-webkit-scrollbar-thumb:hover {
+	background: #9c9c9c;
+}

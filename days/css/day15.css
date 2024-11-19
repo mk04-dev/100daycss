@@ -1,0 +1,77 @@
+.day15 {
+	background: linear-gradient(45deg, #3b92ae, #5ba05d);
+}
+
+.day15 .card {
+	width: 70%;
+	height: 60%;
+	background-color: white;
+	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.day15 .header {
+	padding: 1rem 0;
+	border-bottom: 1px solid #909090;
+	text-align: center;
+	color: #909090;
+}
+
+.day15 .body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem;
+}
+
+.day15 .drop-zone {
+	width: fit-content;
+    width: 40%;
+    aspect-ratio: 1.2/1;
+	max-width: 100%;
+	border: 1px dashed #909090;
+	position: relative;
+	border-radius: 0.25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.day15 .drop-zone:hover {
+	border: 1px dashed #4d4d4d;
+}
+.day15 .drop-zone:is(.drag-over) {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.day15 .input-upload {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+}
+
+.day15 .file-name {
+    display: none;
+    width: 100%;
+    font-size: small;
+	text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.day15 .btn-upload {
+    background-color: #6ECE3B;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.25rem;
+    border-bottom: 2px solid #498C25;
+    cursor: pointer;
+}
+
+.day15 .btn-upload:hover {
+    box-shadow: 0 0 5px 1px #6ECE3B;
+}

@@ -1,0 +1,124 @@
+.day14 {
+	background-color: #4b4841;
+}
+
+.day14 .container {
+	position: relative;
+	width: 76%;
+	height: 44%;
+	box-shadow: 6px 8px 8px 2px rgba(0, 0, 0, 0.4);
+	transition: all 0.8s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.day14 .front,
+.day14 .back {
+	width: 100%;
+	height: 100%;
+	background-color: #ffce4e;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25rem;
+	backface-visibility: hidden;
+}
+
+.day14 .back {
+	transform: rotateX(180deg);
+}
+.day14 .container:hover {
+	transform: rotateX(180deg);
+	box-shadow: 6px -8px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.day14 .bycicle {
+	animation: animate-bycicle 0.5s infinite;
+	transform-origin: 50% 100%;
+}
+
+@keyframes animate-bycicle {
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(1.04);
+	}
+}
+.day14 .front-container {
+	position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.day14 .road-lines {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+    height: 100%;
+	overflow: hidden;
+	display: flex;
+}
+.day14 .lines {
+	position: relative;
+	width: 100%;
+    height: 100%;
+}
+.day14 .road-lines .lines div {
+    position: absolute;
+    bottom: 0;
+	height: 4px;
+	background-color: rgb(80, 80, 80);
+	animation: animate-road-line infinite ease-in-out;
+}
+
+@keyframes animate-road-line {
+	0% {
+		left: 150%;
+	}
+	100% {
+		left: -150%;
+	}
+}
+
+.day14 .helicopter {
+	animation: animation-helicopter 1.6s infinite ease-in-out;
+	z-index: 2;
+}
+.day14 .sky {
+	position: absolute;
+	height: 100%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	top: 0;
+	overflow: hidden;
+}
+.day14 .sky div {
+	position: absolute;
+	height: 0.2rem;
+	background-color: rgb(80, 80, 80);
+	transform: translateY(-20%);
+	animation: animation-sky 1s infinite ease-in;
+}
+
+@keyframes animation-helicopter {
+	0%,
+	100% {
+		transform: translateY(20%);
+	}
+	50% {
+		transform: translateY(-20%);
+	}
+}
+
+@keyframes animation-sky {
+	0% {
+		left: 110%;
+	}
+	100% {
+		left: -10%;
+	}
+}

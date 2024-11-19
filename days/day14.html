@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<link rel="stylesheet" href="/days/css/day14.css" />
+	</header>
+	<body>
+		<div class="day14">
+			<div class="container">
+				<div class="front">
+					<div class="front-container">
+						<img class="bycicle" src="https://100dayscss.com/codepen/bycicle.svg" alt="bycicle" />
+						<div class="road-lines">
+                            <div class="lines"></div>
+                        </div>
+					</div>
+				</div>
+				<div class="back">
+					<img class="helicopter" src="https://100dayscss.com/codepen/helicopter.svg" alt="helocopter" />
+					<div class="sky"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function () {
+			Array(randomInt(20))
+				.fill(0)
+				.forEach((e) => $(".day14 .lines").append("<div></div>"));
+
+			$(".day14 .lines div").each((idx, ele) => {
+				$(ele).css("width", `${randomInt(20, 10)}%`);
+				$(ele).css("animation-delay", `${Math.random()}s`);
+				$(ele).css("animation-duration", `${randomInt(2, 2)}s`);
+			});
+
+			Array(randomInt(10, 5))
+				.fill(0)
+				.forEach((e) => $(".day14 .sky").append("<div></div>"));
+
+			$(".day14 .sky div").each((idx, ele) => {
+				$(ele).css("top", `${randomInt(70, 10)}%`);
+				$(ele).css("width", `${randomInt(10, 4)}%`);
+				$(ele).css("animation-delay", `${Math.random()}s`);
+				$(ele).css("animation-duration", `${randomInt(2)}s`);
+			});
+		});
+	</script>
+</html>

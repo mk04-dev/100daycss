@@ -1,0 +1,60 @@
+.day16 {
+    background-color: #46A6DA;
+}
+.day16 .round {
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    animation: animate-round 1.2s infinite linear;
+}
+
+.day16 .octagon {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1/1;
+    fill: white;
+    /* animation: animate-octagon 0.8s infinite linear; */
+}
+
+.day16 .octa-sparkles {
+    width: 60%;
+    aspect-ratio: 1/1;
+}
+.day16 .sparkle::before {
+    content: "";
+    height: 50px;
+    background-color: white;
+}
+@keyframes animate-round {
+    0% {
+        transform: translateY(-16rem) scaleY(1.1);
+    }
+    45% {
+        transform: translateY(2rem) scaleY(0.7);
+    }
+    60% {
+        transform: translateY(-1rem) scaleY(1.1);
+    }
+    70% {
+        transform: translateY(0rem) scaleY(1);
+    }
+    100% {
+        transform: translateY(0) scale(0);
+    }
+}
+
+@keyframes animate-octagon {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

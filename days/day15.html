@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<link rel="stylesheet" href="/days/css/day15.css" />
+	</header>
+	<body>
+		<div class="day15">
+			<div class="card">
+				<div class="header">Drop file to upload</div>
+				<div class="body">
+					<div class="drop-zone">
+						<img src="https://100dayscss.com/codepen/upload.svg" class="upload" />
+						<span class="file-name"></span>
+						<input type="file" class="input-upload" />
+					</div>
+					<div class="btn-upload">Upload file</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function () {
+			$(".day15 .drop-zone").bind("dragover", function () {
+				$(this).addClass("drag-over");
+			});
+			$(".day15 .drop-zone").bind("dragleave", function () {
+				$(this).removeClass("drag-over");
+			});
+			$(".day15 .input-upload").change(function () {
+				const file = $(this)[0].files[0];
+				if (file) {
+					$(".day15 img").hide();
+					$(".day15 .file-name").html(file.name).show();
+				}
+				$(".day15 .drop-zone").removeClass("drag-over");
+			});
+
+			$(".day15 .btn-upload").click(() => {
+				$(".day15 .input-upload").trigger("click");
+			});
+		});
+	</script>
+</html>

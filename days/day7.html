@@ -1,0 +1,116 @@
+<html lang="en">
+	<header>
+		<link rel="stylesheet" href="/days/css/day7.css" />
+	</header>
+	<body>
+		<div class="day7">
+			<div class="container">
+				<ul class="menu">
+					<li>
+						<i class="fa fa-dashboard"></i>
+						<span>Dashboard</span>
+					</li>
+					<li>
+						<i class="fa fa-user"></i>
+						<span>Profile</span>
+					</li>
+					<li>
+						<i class="fa fa-bell"></i>
+						<span>Notification</span>
+					</li>
+					<li>
+						<i class="fa fa-comments"></i>
+						<span>Messages</span>
+					</li>
+					<li>
+						<i class="fa fa-gear"></i>
+						<span>Settings</span>
+					</li>
+				</ul>
+				<div class="card">
+					<div class="card-header">
+						<div class="header-icon">
+							<div class="line-1"></div>
+							<div class="line-2"></div>
+							<div class="circle"></div>
+						</div>
+						<div class="header-name">Notifications</div>
+						<div class="fa fa-search search-icon"></div>
+						<input type="text" class="search-input" placeholder="Search..." />
+					</div>
+					<div class="card-body">
+						<div class="body-line"></div>
+						<div class="card-content">
+							<div class="noti-item">
+								<div class="noti-item-circle"></div>
+								<div class="noti-item-content">
+									<div class="noti-item-content-time">Now</div>
+									<span class="noti-item-content-user">John Walker</span> posted a photo on your wall.
+								</div>
+							</div>
+							<div class="noti-item">
+								<div class="noti-item-circle"></div>
+								<div class="noti-item-content">
+									<div class="noti-item-content-time">9:24 AM</div>
+									<span class="noti-item-content-user">John Walker</span> posted a photo on your wall.
+								</div>
+							</div>
+							<div class="noti-item">
+								<div class="noti-item-circle"></div>
+								<div class="noti-item-content">
+									<div class="noti-item-content-time">8:19 AM</div>
+									<span class="noti-item-content-user">Alice Parker</span> commented your last post.
+								</div>
+							</div>
+							<div class="noti-item">
+								<div class="noti-item-circle"></div>
+								<div class="noti-item-content">
+									<div class="noti-item-content-time">8:00 AM</div>
+									<span class="noti-item-content-user">John Walker</span> posted a photo on your wall
+								</div>
+							</div>
+							<div class="noti-item">
+								<div class="noti-item-circle"></div>
+								<div class="noti-item-content">
+									<div class="noti-item-content-time">Yesterday</div>
+									<span class="noti-item-content-user">Luke Wayne</span> added you as friend.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function () {
+			$(".day7 .noti-item").each((idx, ele) => {
+				$(ele).css("animation-delay", `${(idx + 1) * 0.2}s`);
+			});
+
+			$(".day7 .header-icon").click(() => {
+				$(".day7 .container").toggleClass("show-menu");
+			});
+
+			$(".day7 .search-icon").click(() => {
+				if ($(".day7 .card-header").hasClass("searching")) {
+					$(".day7 .search-input").blur();
+				} else {
+					$(".day7 .search-input").focus();
+				}
+				$(".day7 .card-header").toggleClass("searching");
+			});
+
+			$(".day7 .search-input").change(function () {
+				const txt = $(this).val().trim();
+				if (!txt) {
+					$(".day7 .noti-item").show();
+				} else {
+					$(".day7 .noti-item-content").each((idx, ele) => {
+						if (!$(ele).text().includes(txt)) $(ele).parent().hide();
+					});
+				}
+			});
+		});
+	</script>
+</html>

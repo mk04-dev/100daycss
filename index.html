@@ -6,6 +6,7 @@
 		<meta name="theme-color" content="#000000" />
 		<meta name="description" content="100 days css challenges" />
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<title>100 Days css</title>
 	</head>
@@ -19,6 +20,10 @@
 					$(`#day${idx + 1}`).load(`./days/day${idx + 1}.html`);
 				});
 		});
+
+		function randomInt (max, sum) {
+			return Math.floor(Math.random() * max) + (sum ?? 1);
+		}
 	</script>
 	<style>
 		body {
@@ -33,7 +38,8 @@
 		.day-container {
 			border: 1px solid rgb(212, 212, 212);
 			border-radius: 8px;
-			width: min(100vw, calc(50% - 1rem), 24rem);
+			width: min(90vw, 25rem);
+
 			aspect-ratio: 1/1;
 			overflow: auto;
 		}
@@ -49,6 +55,7 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			overflow: hidden;
 		}
 	</style>
 </html>

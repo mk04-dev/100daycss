@@ -1,0 +1,122 @@
+.day6 {
+    background: linear-gradient(45deg, #eebe6c, #ca7c4e);
+    color: #5c380a;
+}
+.day6 .container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    background-color: white;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+.day6 .left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10%;
+    padding: 10% 0;
+}
+.day6 .right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.day6 .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.day6 .left .image {
+    position: relative;
+}
+.day6 .left .image > * {
+    border-radius: 50%;
+}
+
+.day6 .left .image img {
+    width: 60px;
+    height: 60px;
+}
+
+.day6 .image:hover .circle-1 {
+    rotate: 360deg;
+}
+.day6 .image:hover .circle-2 {
+    rotate: -180deg;
+}
+
+.day6 .circle-1,
+.day6 .circle-2 {
+    position: absolute;
+    border: 1px solid;
+    transition: rotate 1.4s ease-in-out;
+    border-color: #af690e transparent #af690e #af690e;
+}
+.day6 .circle-1 {
+    width: 70px;
+    height: 70px;
+    top: -6px;
+    left: -6px;
+}
+
+.day6 .circle-2 {
+    width: 64px;
+    height: 64px;
+    top: -3px;
+    left: -3px;
+    rotate: 180deg;
+}
+.day6 .right-item {
+    flex: 1;
+    background-color: #fde5c4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.day6 .right-item:hover {
+    background-color: #dfc5a3;
+}
+.day6 .right-item > div:first-child {
+    font-weight: bold;
+}
+.day6 .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.day6 .name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.day6 .job {
+    font-size: 0.8em;
+}
+
+.day6 .action {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.day6 .action button {
+    background-color: inherit;
+    border: 1px solid #5c380a;
+    color: inherit;
+    border-radius: 15px;
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.day6 .action button:hover {
+    background-color: #dfc5a3;
+}
