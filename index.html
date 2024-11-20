@@ -6,7 +6,10 @@
 		<meta name="theme-color" content="#000000" />
 		<meta name="description" content="100 days css challenges" />
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
 		<title>100 Days css</title>
 	</head>
@@ -21,7 +24,7 @@
 				});
 		});
 
-		function randomInt (max, sum) {
+		function randomInt(max, sum) {
 			return Math.floor(Math.random() * max) + (sum ?? 1);
 		}
 	</script>
@@ -56,6 +59,12 @@
 			align-items: center;
 			position: relative;
 			overflow: hidden;
+		}
+		
+		.text-ellipsis {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	</style>
 </html>

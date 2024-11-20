@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<link rel="stylesheet" href="/days/css/day19.css" />
+	</header>
+	<body>
+		<div class="day19">
+			<div class="background">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="container">
+				<div class="circle-wrapper">
+					<div id="circle-1" class="circle"></div>
+					<div id="circle-2" class="circle"></div>
+					<div id="circle-3" class="circle"></div>
+					<div class="move-circle"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function () {
+			$(".day19 .circle").click(function () {
+				const w = $(".day19 .move-circle").width();
+				const id = $(this).attr("id");
+				const day19Left = $(".day19 .circle-wrapper").get(0).getBoundingClientRect().left;
+				const left = $(this).get(0).getBoundingClientRect().left;
+				$(".day19 .move-circle").css("left", `calc(${left - day19Left}px  + ${$(this).width() * 0.1}px)`);
+				const idx = $(this).index();
+				const scrollLeft = $(`.day19 .background div:nth-child(${idx + 1})`).get(0).offsetLeft;
+				$(".day19 .background").get(0).scrollTo({
+					left: scrollLeft,
+					behavior: "smooth",
+				});
+			});
+		});
+	</script>
+</html>
