@@ -11,42 +11,165 @@
 	align-items: center;
 }
 .day20 .circle {
-	position: absolute;
 	background-color: #354a5f;
 	width: 100%;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
-	position: relative;
+	animation-fill-mode: both;
 }
 
-.day20 .send {
+.day20 .action {
 	width: 50%;
-	height: max(10%, 2rem);
+	height: max(4vh, 2rem);
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.day20 .btnSend,
+.day20 .btnReset {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	background-color: #ecf0f1;
 	border-radius: 2rem;
 	font-weight: bold;
-	vertical-align: middle;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	cursor: pointer;
 }
 
-.day20 .send:hover {
+.day20 .btnSend {
+	z-index: 2;
+}
+
+.day20 .btnSend:hover,
+.day20 .btnReset:hover {
 	background-color: #1abc9c;
 	color: white;
 }
 
-.mail {
+.day20 .mail,
+.day20 .plane {
 	position: absolute;
 	fill: none;
-	stroke: white;
-	width: 60%;
-    stroke-width: 3px;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1s ease-out;
+	stroke: #e2e2e2;
+	width: 70%;
+	stroke-width: 1.2px;
+	stroke-dasharray: 300;
+	stroke-dashoffset: 0;
+	animation-fill-mode: both;
 }
-.mail:hover {
-    stroke-dashoffset: 300;
+.day20 .plane {
+	stroke-dashoffset: 300;
+}
+.day20 #checkbox {
+	display: none;
+}
+
+.day20 .circle::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	border: 0.25rem solid #354a5f;
+	box-sizing: border-box;
+	background: none;
+}
+.day20:has(#checkbox:checked) .circle {
+	animation: day20-circle 1s ease-in-out;
+	animation-fill-mode: both;
+}
+
+.day20:has(#checkbox:checked) .circle::before {
+	animation: day20-circle 0.8s ease-in-out 0.2s;
+	animation-fill-mode: both;
+}
+
+.day20:has(#checkbox:checked) .mail {
+	stroke-dashoffset: 300;
+	transition: stroke-dashoffset 1s ease-in-out;
+}
+.day20:has(#checkbox:checked) .plane {
+	stroke-dashoffset: 0;
+	animation: day20-plane 1.2s 1s ease-in-out;
+	transition: stroke-dashoffset 1s ease-in-out 0.5s;
+	animation-fill-mode: both;
+}
+
+.day20:has(#checkbox:checked) .btnSend {
+	animation: day20-btnSend 1.5s ease-in-out 2.2s;
+	animation-fill-mode: both;
+}
+
+.day20:has(#checkbox:checked) .btnReset {
+	animation: day20-btnReset 1s ease-in-out 3.7s;
+	animation-fill-mode: both;
+}
+
+@keyframes day20-plane {
+	0% {
+		transform: translate3d(0, 0, 0) scale(1);
+		opacity: 1;
+	}
+	20% {
+		transform: translate3d(-20%, 10%, 0) scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate3d(200%, -100%, 0) scale(0.3);
+		opacity: 0;
+	}
+}
+
+@keyframes day20-circle {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	40% {
+		transform: scale(1.15);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes day20-btnSend {
+	0% {
+	}
+	20% {
+		background-color: #1abc9c;
+		color: #1abc9c;
+	}
+	30% {
+		width: max(4vh, 2rem);
+		background-color: #1abc9c;
+		color: transparent;
+		opacity: 1;
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		background-color: #1abc9c;
+		color: transparent;
+		opacity: 0;
+		transform: scale(0);
+		width: max(10%, 2rem);
+	}
+}
+@keyframes day20-btnReset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

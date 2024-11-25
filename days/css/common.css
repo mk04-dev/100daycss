@@ -1,0 +1,12 @@
+.day-container {
+	width: min(80vw, 80vh);
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+body:has(.day-item) .day-container {
+    width: 100%;
+}

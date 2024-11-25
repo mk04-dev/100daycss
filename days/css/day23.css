@@ -1,0 +1,203 @@
+.day23 {
+    background-color: #E16D6C;
+    color: white;
+}
+.day23 .container {
+    position: relative;
+    display: flex;
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.day23 .circle {
+    height: 10%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: d23-circle 1s ease-in-out both;
+}
+
+.day23 .line {
+    position: absolute;
+    height: 0.25rem;
+    background-color: white;
+    width: calc(50% + 0.4rem);
+}
+
+.day23 .line.left {
+    left: -0.4rem;
+    animation: d23-lines 1s ease-in-out 1s both, d23-line-left 1s steps(1) 1s;
+}
+.day23 .line.right {
+    right: -0.4rem;
+    animation: d23-lines 1s ease-in-out 1s both, d23-line-right 1s steps(1) 1s;
+}
+.day23 .small {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.4s;
+    animation-fill-mode: both;
+}
+
+.day23 .small.top {
+    animation-name: d23-small-top;
+}
+
+.day23 .small.bottom {
+    animation-name: d23-small-bottom;
+}
+
+.day23 .big {
+    text-transform: uppercase;
+    font-size: 3.4em;
+    font-weight: bold;
+    animation: d23-big 0.4s ease-in-out 2.4s both;
+}
+
+.day23 .bracket {
+    position: absolute;
+    height: 4.8em;
+    width: 0.25rem;
+    background-color: white;
+    top: calc(50% - 2.4rem);
+    animation: d23-bracket 0.4s ease-in-out 2s both;
+}
+
+.day23 .bracket.left {
+    left: -0.4rem;
+}
+.day23 .bracket.right {
+    right: -0.4rem;
+}
+.day23 .bracket.left::after,
+.day23 .bracket.left::before,
+.day23 .bracket.right::after,
+.day23 .bracket.right::before {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.25rem;
+    background-color: white;
+    transform-origin: 0;
+    animation: d23-bracket-line 0.4s ease-in-out 2.4s both;
+}
+
+.day23 .bracket.left::after {
+    top: 0;
+    left: 0;
+}
+
+.day23 .bracket.left::before {
+    bottom: 0;
+    left: 0;
+}
+.day23 .bracket.right::after {
+    top: 0;
+    right: 0;
+    transform-origin: 100%;
+}
+
+.day23 .bracket.right::before {
+    bottom: 0;
+    right: 0;
+    transform-origin: 100%;
+}
+
+@keyframes d23-big {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes d23-small-top {
+    0% {
+        transform: translateX(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes d23-small-bottom {
+    0% {
+        transform: translateX(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes d23-bracket {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes d23-bracket-line {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes d23-circle {
+    0% {
+		transform: scale(1);
+    }
+    60% {
+		transform: scale(1.4);
+        opacity: 1;
+    }
+    100% {
+		transform: scale(0);
+        opacity: 1;
+    }
+}
+
+@keyframes d23-lines {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+		transform: scaleX(1);
+    }
+    100% {
+		transform: scaleX(0);
+    }
+}
+
+@keyframes d23-line-left {
+    0% {
+        transform-origin: 100%;
+    }
+    50%, 100% {
+        transform-origin: 0%;
+    }
+}
+
+@keyframes d23-line-right {
+    0% {
+        transform-origin: 0%;
+    }
+    50%, 100% {
+        transform-origin: 100%;
+    }
+}

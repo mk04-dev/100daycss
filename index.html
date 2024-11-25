@@ -19,9 +19,22 @@
 			Array(100)
 				.fill(0)
 				.forEach((_, idx) => {
-					$("body").append(`<div id="day${idx + 1}" class="day-container"></div>`);
-					$(`#day${idx + 1}`).load(`./days/day${idx + 1}.html`);
+					$("body").append(`<div id="day-item-${idx + 1}" class="day-item"></div>`);
 				});
+			
+			function callback (entries, observer) {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const idx = entry.target.id.split('-').at(-1);
+						$(`#${entry.target.id}`).load(`./days/day${idx}.html`);
+						return;
+					}
+					$(`#${entry.target.id}`).empty()
+				})
+			}
+			const dayItems = document.querySelectorAll('.day-item');
+			const observer = new IntersectionObserver(callback);
+			dayItems.forEach(item => observer.observe(item))
 		});
 
 		function randomInt(max, sum) {
@@ -38,7 +51,7 @@
 			margin: auto;
 			padding-top: 2rem;
 		}
-		.day-container {
+		.day-item {
 			border: 1px solid rgb(212, 212, 212);
 			border-radius: 8px;
 			width: min(90vw, 25rem);
@@ -46,21 +59,11 @@
 			aspect-ratio: 1/1;
 			overflow: auto;
 		}
-		/* .day-container::before {
+		/* .day-item::before {
 			content: "";
 			position: absolute;
 		} */
 
-		.day-container > div {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			overflow: hidden;
-		}
-		
 		.text-ellipsis {
 			white-space: nowrap;
 			overflow: hidden;

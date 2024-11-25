@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="/days/css/common.css" />
 		<link rel="stylesheet" href="/days/css/day19.css" />
 	</header>
 	<body>
-		<div class="day19">
+		<div class="day-container day19">
 			<div class="background">
 				<div></div>
 				<div></div>
@@ -30,10 +32,10 @@
 				$(".day19 .move-circle").css("left", `calc(${left - day19Left}px  + ${$(this).width() * 0.1}px)`);
 				const idx = $(this).index();
 				const scrollLeft = $(`.day19 .background div:nth-child(${idx + 1})`).get(0).offsetLeft;
-				$(".day19 .background").get(0).scrollTo({
-					left: scrollLeft,
-					behavior: "smooth",
-				});
+				// Stop previous scroll animate
+				$(".day19 .background").stop();
+				// Scroll animate
+				$(".day19 .background").animate({ scrollLeft }, 600);
 			});
 		});
 	</script>

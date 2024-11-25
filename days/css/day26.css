@@ -1,0 +1,85 @@
+.day26 {
+    background-color: #C7D6E1;
+}
+.day26 .card {
+    position: absolute;
+    background-color: white;
+    padding: 1.25rem 1rem;
+    overflow: hidden;
+    width: 50%;
+    height: 25%;
+    border-radius: 0.25rem;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.day26 .card.active {
+    opacity: 1;
+    pointer-events: all;
+    animation: d26-fadeIn 0.4s ease-out 0.4s both;
+}
+
+.day26 .card.inactive {
+    animation: d26-fadeOut 0.4s ease-out forwards;
+}
+
+.day26 .number-bg {
+    position: absolute;
+    background-color: #8391A1;
+    width: 28%;
+    aspect-ratio: 1/1;
+    top: -28%;
+    right: calc(-28% / 2);
+    rotate: 45deg;
+}
+
+.day26 .number {
+    position: absolute;
+    color: white;
+    top: 2%;
+    right: 2%;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.day26 .text {
+    text-align: center;
+    font-size: 0.8em;
+    color: #8391A1;
+}
+
+.day26 .text .headline {
+    font-size: 1.4em !important;
+    font-weight: bold;
+}
+.day26 .button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0;
+    background-color: #3CA7FB;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+@keyframes d26-fadeIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    } 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes d26-fadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    } 100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}

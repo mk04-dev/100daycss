@@ -1,0 +1,102 @@
+.day24 {
+	background-color: #57d895;
+}
+
+.day24 .btnFinish-root {
+	display: none;
+}
+
+.day24 .btnFinish {
+	position: absolute;
+	border: 2px solid white;
+	width: 60%;
+	height: calc(31px * 2 + 2px); /* r * 2 + strokeW */
+	text-align: center;
+	border-radius: 2rem;
+	font-weight: bold;
+	font-size: 1.4em;
+	overflow: hidden;
+	color: white;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.day24 .checkmark {
+	position: absolute;
+	opacity: 0;
+}
+
+.day24 .circle {
+	display: none;
+	position: absolute;
+	fill: none;
+	stroke-width: 2px;
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-dasharray: calc(31% * 2 * 3.14); /*Chu vi duong tron*/
+	stroke-dashoffset: calc(31% * 2 * 3.14);
+	transform: rotate(-90deg);
+	pointer-events: none;
+}
+
+.day24:has(.btnFinish-root:checked) .btnFinish {
+	animation: d24-btn-p1 0.6s ease-in-out both, d24-btn-p2 0.2s ease-out 1.2s both;
+}
+
+.day24:has(.btnFinish-root:checked) .circle {
+	display: block;
+	animation: d24-circle 1.2s ease-out 0.6s both;
+}
+
+.day24:has(.btnFinish-root:checked) .checkmark {
+	animation: d24-checkmark 1s ease-out 1.2 both;
+}
+
+@keyframes d24-circle {
+	0% {
+		stroke-dashoffset: calc(31% * 2 * 3.14);
+	}
+	50% {
+		transform: rotate(-90deg) scale(1);
+		stroke-dashoffset: 0;
+        opacity: 1;
+	}
+	100% {
+		transform: rotate(-90deg) scale(2);
+		stroke-dashoffset: 0;
+        opacity: 0;
+	}
+}
+
+@keyframes d24-btn-p1 {
+	0% {
+		color: white;
+		width: 60%;
+		border-color: white;
+	}
+	100% {
+		color: transparent;
+		width: calc((31px + 1px) * 2);
+		border-color: #57b181;
+	}
+}
+
+@keyframes d24-btn-p2 {
+	0% {
+		background: transparent;
+	}
+	100% {
+		background: white;
+	}
+}
+
+@keyframes d24-checkmark {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
