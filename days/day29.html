@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="/days/css/common.css" />
+		<link rel="stylesheet" href="/days/css/day29.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</header>
+	<body>
+		<div class="day-container day29">
+			<div class="container">
+				<div class="search-wrapper">
+					<input type="text" class="searchfield" placeholder="Start typing ..." value="" />
+					<button type="button" class="button"><span class="fa fa-search"></span></button>
+				</div>
+				<ul class="suggestions clearfix"></ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(() => {
+            const $suggestions = $('.day29 .suggestions');
+
+            $('.day29 .searchfield').keyup(function () {
+                const val = $(this).val();
+                $suggestions.empty()
+                if (val) {
+                    $suggestions.addClass('active')
+                    $suggestions.append(`<li><b>${val}</b></li>`)
+                    $suggestions.append(`<li>Veritatis et  <b>${val}</b></li>`)
+                    $suggestions.append(`<li>ut aliquid ex <b>${val}</b></li>`)
+                } else {
+                    $suggestions.removeClass('active')
+                }
+            })
+            
+        });
+	</script>
+</html>

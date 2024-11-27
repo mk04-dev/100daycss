@@ -1,0 +1,54 @@
+.day33 {
+	background-color: #75c1e8;
+
+	.sun {
+		position: absolute;
+		top: 10%;
+		left: 16%;
+		width: 18%;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		background-color: #ffd93c;
+		animation: d33-moveRight 60s linear infinite both;
+	}
+
+	.cloud-big {
+		position: absolute;
+		top: 32%;
+		left: 80%;
+		width: 36%;
+		animation: d33-moveLeft 60s linear infinite both;
+	}
+
+	.cloud-medium {
+		@extend .cloud-big;
+		top: 25%;
+		left: 5%;
+		width: 24%;
+	}
+
+	.cloud-small {
+		@extend .cloud-big;
+		top: 20%;
+		left: 40%;
+		width: 16%;
+	}
+}
+
+@keyframes d33-moveLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+@keyframes d33-moveRight {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(200%);
+	}
+}

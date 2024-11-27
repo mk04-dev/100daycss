@@ -1,0 +1,49 @@
+.day33 {
+  background-color: #75c1e8;
+}
+.day33 .sun {
+  position: absolute;
+  top: 10%;
+  left: 16%;
+  width: 18%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #ffd93c;
+  animation: d33-moveRight 60s linear infinite both;
+}
+.day33 .cloud-big, .day33 .cloud-small, .day33 .cloud-medium {
+  position: absolute;
+  top: 32%;
+  left: 80%;
+  width: 36%;
+  animation: d33-moveLeft 60s linear infinite both;
+}
+.day33 .cloud-medium {
+  top: 25%;
+  left: 5%;
+  width: 24%;
+}
+.day33 .cloud-small {
+  top: 20%;
+  left: 40%;
+  width: 16%;
+}
+
+@keyframes d33-moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+@keyframes d33-moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/*# sourceMappingURL=day33.css.map */

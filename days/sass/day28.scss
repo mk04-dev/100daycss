@@ -1,0 +1,95 @@
+
+.day28 {
+	background-color: #dd3c54;
+	position: relative;
+}
+
+.day28 .bell {
+	position: absolute;
+	fill: white;
+	transform-origin: 50% 0%;
+	animation: d28-bell 2.5s ease infinite;
+}
+
+.day28 .line {
+	position: absolute;
+	fill: none;
+	stroke-width: 0.125rem;
+	stroke: white;
+	stroke-linecap: round;
+	opacity: 0;
+	animation-duration: 2.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@for $i from 1 through 6 {
+	.day28 .line-#{$i} {
+		animation-name: d28-line-#{$i};
+	}
+}
+
+
+@for $i from 1 through 3 {
+	@keyframes d28-line-#{$i} {
+		0%, #{($i - 1) * 20%} {
+			transform: rotate(180deg) translateX(3rem) scale(1);
+			opacity: 0;
+		}
+        #{($i) * 20% + 1%} {
+			opacity: 1;
+        }
+		#{($i - 1) * 20% + 40%},
+		100% {
+			transform: rotate(180deg) translateX(6rem) scale(2);
+			opacity: 0;
+		}
+	}
+}
+
+@for $i from 4 through 6 {
+	@keyframes d28-line-#{$i} {
+		0%, #{($i - 4) * 20%} {
+			transform: rotate(180deg) translateX(-3rem) scale(1);
+			opacity: 0;
+		}
+        #{($i - 3) * 20% + 1%} {
+			opacity: 1;
+        }
+		#{($i - 4) * 20% + 40%},
+		100% {
+			transform: rotate(180deg) translateX(-6rem) scale(2);
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes d28-bell {
+	0%,
+	50%,
+	100% {
+		transform: rotateZ(0);
+	}
+	5%,
+	10%,
+	15%,
+	20%,
+	25%,
+	30%,
+	35%,
+	40%,
+	45% {
+		transform: rotateZ(10deg);
+	}
+	7.5%,
+	12.5%,
+	17.5%,
+	22.5%,
+	27.5%,
+	32.5%,
+	37.5%,
+	42.5%,
+	47.5% {
+		transform: rotateZ(-10deg);
+	}
+}

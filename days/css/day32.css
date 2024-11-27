@@ -1,0 +1,119 @@
+.day32 {
+  background: linear-gradient(to top right, #d35b2a, #fcae3a);
+}
+.day32 .counter {
+  width: 30%;
+  aspect-ratio: 4/1;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.day32 .counter .minus {
+  height: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.day32 .counter .minus .line {
+  position: absolute;
+  top: calc(50% - 0.0625rem);
+  left: 20%;
+  background-color: rgb(255, 88, 88);
+  width: 60%;
+  height: 0.125rem;
+}
+.day32 .counter .minus:hover {
+  background-color: rgb(255, 88, 88);
+}
+.day32 .counter .minus:hover .line {
+  background-color: white;
+}
+.day32 .counter .number {
+  height: 100%;
+  font-size: 1.5em;
+  color: #6a85a0;
+  font-weight: bold;
+  width: fit-content;
+  position: relative;
+}
+.day32 .counter .number span {
+  display: block;
+  top: 0;
+  transform-origin: 50% 50%;
+}
+.day32 .counter .number span.fadeInUp {
+  animation: d32-fadeIn 0.3s ease-out 0.15s backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+.day32 .counter .number span.fadeOutUp {
+  animation: d32-fadeOut 0.3s ease-in;
+  transform: scale(1.4);
+  opacity: 0;
+  position: absolute;
+}
+.day32 .counter .number span.fadeInDown {
+  animation: d32-fadeOut 0.3s ease-out 0.15s reverse backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+.day32 .counter .number span.fadeOutDown {
+  animation: d32-fadeIn 0.3s ease-in reverse;
+  transform: scale(0.6);
+  opacity: 0;
+  position: absolute;
+}
+.day32 .counter .plus {
+  height: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.day32 .counter .plus .line-h,
+.day32 .counter .plus .line-v {
+  position: absolute;
+  top: calc(50% - 0.0625rem);
+  left: 20%;
+  background-color: rgb(105, 233, 105);
+  width: 60%;
+  height: 0.125rem;
+}
+.day32 .counter .plus .line-v {
+  rotate: 90deg;
+}
+.day32 .counter .plus:hover {
+  background-color: rgb(105, 233, 105);
+}
+.day32 .counter .plus:hover .line-h,
+.day32 .counter .plus:hover .line-v {
+  background-color: white;
+}
+
+@keyframes d32-fadeIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes d32-fadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=day32.css.map */

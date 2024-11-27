@@ -1,0 +1,63 @@
+.day29 {
+	background-color: #5ca4ea;
+}
+
+.day29 .container {
+	position: absolute;
+    width: 70%;
+	top: calc(50% - 1.2rem);
+}
+
+.search-wrapper {
+	display: flex;
+	align-items: center;
+	background: white;
+	padding: 0 0.625rem;
+}
+.day29 .searchfield {
+    flex: 1;
+	height: 2.4rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-weight: bold;
+	color: #5ca4ea;
+}
+
+.day29 .searchfield::placeholder {
+	color: #5ca4ea;
+}
+
+.day29 .button {
+	float: right;
+	position: relative;
+	background: transparent;
+	border: none;
+	padding: 0;
+	font-size: 1.2em;
+	color: #5ca4ea;
+}
+
+.day29 .suggestions {
+	margin: 0;
+    display: none;
+	color: #6e6e6e;
+	list-style: none;
+	background: white;
+	padding: 0.25rem 0;
+}
+
+.day29 .suggestions.active {
+    display: block;
+	border-top: 1px solid #5ca4ea;
+}
+
+.day29 .suggestions li {
+	padding: 0.5rem 0.625rem;
+    cursor: pointer;
+}
+
+.day29 .suggestions li:hover {
+	background: rgba(0, 0, 0, 0.04);
+	color: #5ca4ea;
+}

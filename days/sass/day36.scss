@@ -1,0 +1,94 @@
+.day36 {
+	background-color: #2b3642;
+
+	.container {
+		width: 80%;
+		height: 60%;
+		border-radius: 0.25rem;
+		overflow: hidden;
+		box-shadow: 0.25rem 0.5rem 0.5rem 2px rgba(0, 0, 0, 0.4);
+		.tabs {
+			width: 100%;
+			height: 100%;
+
+			input[type="radio"] {
+				display: none;
+			}
+
+			input[type="radio"]:checked + .tab {
+				background-color: #5da2ed;
+				color: rgb(202, 202, 202);
+			}
+
+			.top {
+				display: flex;
+				background-color: #3d4d5e;
+				position: relative;
+				height: 16%;
+
+				&:has(#tab-1:checked) ~ .content #box-1,
+				&:has(#tab-2:checked) ~ .content #box-2,
+				&:has(#tab-3:checked) ~ .content #box-3,
+				&:has(#tab-4:checked) ~ .content #box-4 {
+					pointer-events: all;
+					opacity: 1;
+					transform: translateY(0);
+					transition: all 0.5s ease-out 0.4s;
+				}
+				.tab {
+					height: 100%;
+					aspect-ratio: 1/1;
+					cursor: pointer;
+					background-color: transparent;
+					color: #8398ad;
+					transition: background-color 1s ease-in-out;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					&:hover {
+						color: white;
+					}
+					&.search {
+						position: absolute;
+						right: 0;
+					}
+				}
+			}
+
+			.content {
+				position: relative;
+				padding: 0 1rem;
+				height: -webkit-fill-available;
+				background-color: white;
+				.box {
+					position: absolute;
+					opacity: 0;
+					pointer-events: none;
+					transform: translateY(1rem);
+					transition: all 0.4s ease-out;
+					width: 100%;
+					height: 100%;
+
+					h1 {
+						color: #3d4d5e;
+						font-size: 1.2em;
+					}
+
+					p {
+						display: flex;
+						flex-direction: column;
+						gap: 0.25rem;
+
+						span {
+							display: block;
+							height: 0.25rem;
+							background-color: rgb(194, 191, 191);
+							border-radius: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

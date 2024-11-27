@@ -1,0 +1,48 @@
+.day30 {
+  background: #16a085;
+}
+.day30 .circle {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  animation: d30-circle 3s ease-out infinite both;
+}
+.day30 .day30 .center {
+  width: 100%;
+}
+.day30 .day30 .center svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 0.25rem;
+  stroke-linecap: round;
+  stroke-dasharray: 50 582;
+  animation: d30-line 3s linear infinite both;
+}
+
+@keyframes d30-circle {
+  0%, 41% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  60%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes d30-line {
+  0% {
+    stroke-dashoffset: 682;
+  }
+  80%, 100% {
+    stroke-dashoffset: 50;
+  }
+}
+
+/*# sourceMappingURL=day30.css.map */

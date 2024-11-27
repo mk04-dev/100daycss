@@ -1,0 +1,108 @@
+.day31 {
+  background-color: #4c4ba2;
+}
+
+.day31 .container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.day31 .circle {
+  width: 0.85rem;
+  height: 0.85rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.day31 .circle-1 {
+  animation: d31-circle 1224.4897959184ms ease-in-out infinite;
+}
+
+.day31 .circle-2 {
+  animation: d31-circle 1250ms ease-in-out infinite;
+}
+
+.day31 .circle-3 {
+  animation: d31-circle 1276.5957446809ms ease-in-out infinite;
+}
+
+.day31 .circle-4 {
+  animation: d31-circle 1304.347826087ms ease-in-out infinite;
+}
+
+.day31 .circle-5 {
+  animation: d31-circle 1333.3333333333ms ease-in-out infinite;
+}
+
+.day31 .circle-6 {
+  animation: d31-circle 1363.6363636364ms ease-in-out infinite;
+}
+
+.day31 .circle-7 {
+  animation: d31-circle 1395.3488372093ms ease-in-out infinite;
+}
+
+.day31 .circle-8 {
+  animation: d31-circle 1428.5714285714ms ease-in-out infinite;
+}
+
+.day31 .circle-9 {
+  animation: d31-circle 1463.4146341463ms ease-in-out infinite;
+}
+
+.day31 .circle-10 {
+  animation: d31-circle 1500ms ease-in-out infinite;
+}
+
+.day31 .circle-11 {
+  animation: d31-circle 1538.4615384615ms ease-in-out infinite;
+}
+
+.day31 .circle-12 {
+  animation: d31-circle 1578.9473684211ms ease-in-out infinite;
+}
+
+.day31 .circle-13 {
+  animation: d31-circle 1621.6216216216ms ease-in-out infinite;
+}
+
+.day31 .circle-14 {
+  animation: d31-circle 1666.6666666667ms ease-in-out infinite;
+}
+
+.day31 .circle-15 {
+  animation: d31-circle 1714.2857142857ms ease-in-out infinite;
+}
+
+.day31 .circle-16 {
+  animation: d31-circle 1764.7058823529ms ease-in-out infinite;
+}
+
+.day31 .circle-17 {
+  animation: d31-circle 1818.1818181818ms ease-in-out infinite;
+}
+
+.day31 .circle-18 {
+  animation: d31-circle 1875ms ease-in-out infinite;
+}
+
+.day31 .circle-19 {
+  animation: d31-circle 1935.4838709677ms ease-in-out infinite;
+}
+
+.day31 .circle-20 {
+  animation: d31-circle 2000ms ease-in-out infinite;
+}
+
+@keyframes d31-circle {
+  0%, 100% {
+    transform: translateX(-3rem);
+  }
+  50% {
+    transform: translateX(3rem);
+  }
+}
+
+/*# sourceMappingURL=day31.css.map */

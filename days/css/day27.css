@@ -1,0 +1,82 @@
+.day27 {
+    background: linear-gradient(to top right, #FDA231 0%, #FDCA31 100%);
+    color: #567A8A;
+    font-size: 0.9em;
+}
+
+.day27 .list {
+    width: 40%;
+    height: 60%;
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+}
+
+.day27 .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #567A8A;
+}
+
+.day27 .head .title {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.day27 ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.day27 ul li{
+    position: relative;
+}
+.day27 li input {
+    display: none;
+}
+.day27 li .text {
+    cursor: pointer;
+}
+.day27 li .button {
+    position: relative;
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 50%;
+    border: 1px solid #567A8A;
+    float: right;
+    cursor: pointer;
+    z-index: 10;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.4s;
+}
+.day27 li svg {
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 0;
+    stroke-width: 1;
+    stroke: #567A8A;
+    fill: none;
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    transition: all 0.4s ease-in-out 0s;
+}
+.day27 li:has(input:checked) {
+    opacity: 0.4;
+}
+.day27 li:has(input:checked) .button {
+    transform: scale(1.2);
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.day27 li:has(input:checked) svg {
+    stroke-dashoffset: 0;
+    transition-delay: 0.4s;
+}

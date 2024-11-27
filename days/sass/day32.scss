@@ -1,0 +1,136 @@
+$bg-minus: rgb(255, 88, 88);
+$bg-plus: rgb(105, 233, 105);
+
+.day32 {
+	background: linear-gradient(to top right, #d35b2a, #fcae3a);
+
+	.counter {
+		width: 30%;
+		aspect-ratio: 4/1;
+		background-color: white;
+		border-radius: 2rem;
+		padding: 0.25rem;
+		display: flex;
+		align-items: center;
+        justify-content: space-between;
+		position: relative;
+
+		.minus {
+			height: 100%;
+			position: relative;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			cursor: pointer;
+
+			.line {
+				$w: 60%;
+				position: absolute;
+				top: calc(50% - 0.125rem / 2);
+				left: calc((100% - $w) / 2);
+				background-color: $bg-minus;
+				width: $w;
+				height: 0.125rem;
+			}
+
+			&:hover {
+				background-color: $bg-minus;
+				.line {
+					background-color: white;
+				}
+			}
+		}
+		.number {
+			height: 100%;
+			font-size: 1.5em;
+			color: #6a85a0;
+			font-weight: bold;
+			width: fit-content;
+			position: relative;
+
+			span {
+				display: block;
+				top: 0;
+				transform-origin: 50% 50%;
+
+				&.fadeInUp {
+					animation: d32-fadeIn 0.3s ease-out 0.15s backwards;
+					transform: scale(1);
+					opacity: 1;
+				}
+
+				&.fadeOutUp {
+					animation: d32-fadeOut 0.3s ease-in;
+					transform: scale(1.4);
+					opacity: 0;
+					position: absolute;
+				}
+
+				&.fadeInDown {
+					animation: d32-fadeOut 0.3s ease-out 0.15s reverse backwards;
+					transform: scale(1);
+					opacity: 1;
+				}
+
+				&.fadeOutDown {
+					animation: d32-fadeIn 0.3s ease-in reverse;
+					transform: scale(0.6);
+					opacity: 0;
+					position: absolute;
+				}
+			}
+		}
+
+		.plus {
+			height: 100%;
+			position: relative;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			cursor: pointer;
+
+			.line-h,
+			.line-v {
+				$w: 60%;
+				position: absolute;
+				top: calc(50% - 0.125rem / 2);
+				left: calc((100% - $w) / 2);
+				background-color: $bg-plus;
+				width: $w;
+				height: 0.125rem;
+			}
+
+			.line-v {
+				rotate: 90deg;
+			}
+
+			&:hover {
+				background-color: $bg-plus;
+				.line-h,
+				.line-v {
+					background-color: white;
+				}
+			}
+		}
+	}
+}
+
+@keyframes d32-fadeIn {
+	from {
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes d32-fadeOut {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
