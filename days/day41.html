@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="/days/css/common.css" />
+		<link rel="stylesheet" href="/days/css/day41.css" />
+	</header>
+	<body>
+		<div class="day-container day41">
+			<div class="modal">
+				<img
+					src="https://100dayscss.com/codepen/alert.png"
+					width="44"
+					height="38"
+				/>
+				<span class="title">Oh snap!</span>
+				<p>An error has occured while creating an error report.</p>
+				<div class="button">Dismiss</div>
+			</div>
+		</div>
+	</body>
+	<script>
+        $('.day41 .button').click(() => {
+            $('.day41 .modal').addClass('hide')
+        })
+    </script>
+</html>

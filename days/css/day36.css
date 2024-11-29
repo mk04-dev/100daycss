@@ -17,7 +17,7 @@
 }
 .day36 .container .tabs input[type=radio]:checked + .tab {
   background-color: #5da2ed;
-  color: rgb(202, 202, 202);
+  color: rgb(255, 255, 255);
 }
 .day36 .container .tabs .top {
   display: flex;

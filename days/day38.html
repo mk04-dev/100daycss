@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="/days/css/common.css" />
+		<link rel="stylesheet" href="/days/css/day38.css" />
+	</header>
+	<body>
+		<div class="day-container day38">
+			<div class="logo logo-1 active">
+				<svg viewBox="0 0 100 100">
+					<path
+						d="M 50 0 L 95 25 C 85 40, 85 60, 95 75 L 50 100 L 5 75 C 15 60 15 40 5 25 L 5 25"
+					/>
+				</svg>
+			</div>
+			<div class="logo logo-2">
+				<svg viewBox="0 0 100 100">
+					<path
+						d="M 50 0 L 95 25 C 85 40, 85 60, 95 75 L 50 100 L 5 75 C 15 60 15 40 5 25 L 5 25"
+					/>
+				</svg>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(".day38").click(function () {
+			$(".day38 .logo-1").toggleClass("active");
+			$(".day38 .logo-2").toggleClass("active");
+		});
+	</script>
+</html>

@@ -1,0 +1,27 @@
+.day38 {
+  background-color: #9b59b6;
+}
+.day38 .logo {
+  position: absolute;
+  width: 20%;
+}
+.day38 .logo.logo-1 {
+  fill: white;
+  transform: scale(10);
+  transition: transform 0.5s ease-in-out;
+}
+.day38 .logo.logo-1.active {
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+.day38 .logo.logo-2 {
+  fill: #9b59b6;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+.day38 .logo.logo-2.active {
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+/*# sourceMappingURL=day38.css.map */

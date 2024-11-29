@@ -1,0 +1,40 @@
+$buld-w: 44%; // radius * 2 - 1%
+
+.day43 {
+	background-color: black;
+
+	.bulb-container {
+		position: relative;
+		width: 50%;
+
+		.buld {
+			position: absolute;
+			top: 11%;
+			left: calc(50% - $buld-w / 2);
+			width: $buld-w;
+			height: $buld-w;
+			border-radius: 50%;
+			box-shadow: 0 0 6rem 4rem rgba(255, 255, 0, 0.692);
+			pointer-events: none;
+			opacity: 1;
+			transition: opacity 0.5s ease-in-out 0.5s;
+		}
+		svg {
+			width: 100%;
+			fill: white;
+			.light {
+				position: relative;
+				cursor: pointer;
+				transition: fill 1s ease-in-out;
+			}
+
+			&:hover .light {
+				fill: gray;
+			}
+		}
+	}
+	&:has(svg:hover) .buld {
+		opacity: 0;
+        transition-delay: 0s;
+	}
+}

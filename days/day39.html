@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="/days/css/common.css" />
+		<link rel="stylesheet" href="/days/css/day39.css" />
+	</header>
+	<body>
+		<div class="day-container day39">
+			<div class="menu-container">
+				<div class="menu-icon">
+					<div class="line line-top"></div>
+					<div class="line line-bottom"></div>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><span>Home</span></li>
+						<li><span>Work</span></li>
+						<li><span>Life</span></li>
+						<li><span>Spirit</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(".day39 .menu-icon").click(() =>
+			$(".day39 .menu-container").addClass("active")
+		);
+
+		$(".day39 .menu li span").click(() =>
+			$(".day39 .menu-container").removeClass("active")
+		);
+	</script>
+</html>

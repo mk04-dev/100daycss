@@ -10,10 +10,10 @@
   opacity: 0;
   animation: d30-circle 3s ease-out infinite both;
 }
-.day30 .day30 .center {
+.day30 .center {
   width: 100%;
 }
-.day30 .day30 .center svg {
+.day30 .center svg {
   fill: none;
   stroke: white;
   stroke-width: 0.25rem;

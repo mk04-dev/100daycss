@@ -1,0 +1,81 @@
+.day40 .pics {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  height: 100%;
+}
+.day40 .pics .pic {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out;
+  animation: d40-z-down 0.6s ease-in-out;
+}
+.day40 .pics .pic:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.day40 .pics .pic img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+.day40 .pics .pic.active {
+  transform: scaleY(3) scaleX(3);
+  animation: d40-z-up 0.6s ease-in-out both;
+}
+.day40 .pics .pic.pic-1 {
+  transform-origin: 0% 0%;
+}
+.day40 .pics .pic.pic-2 {
+  transform-origin: 50% 0%;
+}
+.day40 .pics .pic.pic-3 {
+  transform-origin: 100% 0%;
+}
+.day40 .pics .pic.pic-4 {
+  transform-origin: 0% 50%;
+}
+.day40 .pics .pic.pic-5 {
+  transform-origin: 50% 50%;
+}
+.day40 .pics .pic.pic-6 {
+  transform-origin: 100% 50%;
+}
+.day40 .pics .pic.pic-7 {
+  transform-origin: 0% 100%;
+}
+.day40 .pics .pic.pic-8 {
+  transform-origin: 50% 100%;
+}
+.day40 .pics .pic.pic-9 {
+  transform-origin: 100% 100%;
+}
+
+@keyframes d40-z-up {
+  0% {
+    z-index: 1;
+  }
+  1% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
+}
+@keyframes d40-z-down {
+  0% {
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+/*# sourceMappingURL=day40.css.map */

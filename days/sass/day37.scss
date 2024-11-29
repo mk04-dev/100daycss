@@ -1,0 +1,112 @@
+$tf-front: translate3d(0, 0, 0);
+$tf-right: translate3d(105%, 0, -2rem);
+$tf-left: translate3d(-105%, 0, -2rem);
+$shadow-front: 0 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.4);
+$shadow-right: 0.125rem 0.125rem 0.5rem 0rem rgba(0, 0, 0, 0.4);
+$shadow-left: -0.125rem 0.125rem 0.5rem 0rem rgba(0, 0, 0, 0.4);
+$speed: 6s;
+$line-count: 5;
+.day37 {
+	background-color: #5a717b;
+	.container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform: perspective(4rem);
+		transform-style: preserve-3d;
+		.card {
+			position: absolute;
+			top: calc(50% - 34% / 2);
+			left: calc(50% - 34% / 2);
+			height: 34%;
+			aspect-ratio: 1/1;
+			border-radius: 0.25rem;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+
+			&.card-1 {
+				transform: $tf-front;
+				animation: d37-card-1 $speed ease-in-out infinite;
+			}
+			&.card-2 {
+				transform: $tf-right;
+				animation: d37-card-2 $speed ease-in-out infinite;
+			}
+			&.card-3 {
+				transform: $tf-left;
+				animation: d37-card-3 $speed ease-in-out infinite;
+			}
+
+			.card-header {
+				height: 25%;
+				background-color: #ff9800;
+			}
+
+			.card-body {
+				flex: 1;
+                padding: 8%;
+				background-color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+
+                .line {
+                    height: 0.25rem;
+                    background-color: #5a717b;
+                    @for $i from 1 through $line-count {
+                        &:nth-child(#{$i}) {
+                            width: percentage((random(60) + 40) / 100);
+                        }
+                    }
+                }
+			}
+		}
+	}
+}
+
+@keyframes d37-card-1 {
+	0%,
+	100% {
+		transform: $tf-front;
+		box-shadow: $shadow-front;
+	}
+	33.33% {
+		transform: $tf-right;
+		box-shadow: $shadow-right;
+	}
+	66.66% {
+		transform: $tf-left;
+		box-shadow: $shadow-left;
+	}
+}
+@keyframes d37-card-2 {
+	0%,
+	100% {
+		transform: $tf-right;
+		box-shadow: $shadow-right;
+	}
+	33.33% {
+		transform: $tf-left;
+		box-shadow: $shadow-left;
+	}
+	66.66% {
+		transform: $tf-front;
+		box-shadow: $shadow-front;
+	}
+}
+@keyframes d37-card-3 {
+	0%,
+	100% {
+		transform: $tf-left;
+		box-shadow: $shadow-left;
+	}
+	33.33% {
+		transform: $tf-front;
+		box-shadow: $shadow-front;
+	}
+	66.66% {
+		transform: $tf-right;
+		box-shadow: $shadow-right;
+	}
+}
