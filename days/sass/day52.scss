@@ -1,0 +1,29 @@
+$numOfWave: 10;
+
+.day52 {
+	background-color: #27ae60;
+
+	.wave {
+		fill: none;
+		stroke: white;
+		stroke-linecap: round;
+        stroke-width: 0;
+        animation: d50-wave 4s ease-in-out infinite;
+
+		@for $i from 1 to $numOfWave + 1 {
+			&:nth-child(#{$i}) {
+				stroke-dasharray: 0 3.14;
+                animation-delay: 0.25s * ($i - 1);
+			}
+		}
+	}
+}
+
+@keyframes d50-wave {
+    0%, 100% {
+        stroke-width: 0;
+    }
+    50% {
+        stroke-width: 2%;
+    }
+}

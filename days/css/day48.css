@@ -1,0 +1,46 @@
+.day48 {
+  background-color: #e47512;
+}
+.day48 .cube {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform-style: preserve-3d;
+  transform: rotate3d(-0.5, -0.5, -0.2, 30deg);
+  transition: all 1s ease-in-out;
+}
+.day48 .cube:hover {
+  transform: rotate3d(-0.5, -0.5, -0.2, 240deg);
+}
+.day48 .cube .side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+}
+.day48 .cube .side.front {
+  transform: translate3d(0, 0, 5rem);
+  background-color: red;
+}
+.day48 .cube .side.back {
+  transform: translate3d(0, 0, -5rem);
+  background-color: green;
+}
+.day48 .cube .side.right {
+  transform: translate3d(5rem, 0, 0) rotateY(90deg);
+  background-color: blue;
+}
+.day48 .cube .side.left {
+  transform: translate3d(-5rem, 0, 0) rotateY(90deg);
+  background-color: yellow;
+}
+.day48 .cube .side.top {
+  transform: translate3d(0, -5rem, 0) rotateX(90deg);
+  background-color: white;
+}
+.day48 .cube .side.bottom {
+  transform: translate3d(0, 5rem, 0) rotateX(90deg);
+  background-color: black;
+}
+
+/*# sourceMappingURL=day48.css.map */

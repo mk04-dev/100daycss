@@ -1,0 +1,36 @@
+.day45 {
+	background-color: #5ca4ea;
+
+	.button {
+		background: #5ca4ea;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			position: absolute;
+			color: white;
+			text-transform: uppercase;
+			font-size: large;
+		}
+
+		.border {
+			fill: none;
+			stroke-width: 1px;
+			stroke: #9dcdff;
+			stroke-dasharray: 480;
+
+			.hl-line {
+				stroke: white;
+				z-index: 2;
+				stroke-dasharray: 60 480;
+				stroke-dashoffset: 600;
+				transition: stroke-dashoffset 0.8s ease-in-out;
+			}
+		}
+		&:hover .border .hl-line {
+			stroke-dashoffset: 60;
+		}
+	}
+}

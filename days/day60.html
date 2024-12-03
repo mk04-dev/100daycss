@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="/days/css/common.css" />
+		<link rel="stylesheet" href="/days/css/day60.css" />
+	</header>
+	<body>
+		<div class="day-container day60">
+            <div class="mark"></div>
+            <div class="text">hover</div>
+		</div>
+	</body>
+	<script>
+        $('.day60').on('mousemove', function(e) {
+            $(this).find('.mark').css('transition', 'none')
+            $(this).find('.mark').css('height', e.offsetY)
+        })
+        $('.day60').on('mouseleave', function(e) {
+            $(this).find('.mark').css('transition', 'height 0.4s ease-in-out')
+            $(this).find('.mark').css('height', '50%')
+        })
+    </script>
+</html>

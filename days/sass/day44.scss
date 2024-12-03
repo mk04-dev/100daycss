@@ -1,0 +1,33 @@
+$numOfRect: 20;
+
+.day44 {
+	background-color: black;
+
+	.rect {
+		position: absolute;
+		aspect-ratio: 1/1;
+		animation: d44-rotate 5s ease-in-out infinite;
+		background: #191a49;
+	}
+	&:hover .rect {
+		animation-play-state: paused;
+	}
+	@for $i from 1 through $numOfRect {
+		.rect-#{$i} {
+            z-index: $numOfRect - $i;
+			width: 0.75rem * $i;
+			border: 2px solid rgb(200 - $i * 5, 200 - $i * 5, 200 - $i * 5);
+			animation-delay: (0.03s * $numOfRect) - (0.03s * $i);
+		}
+	}
+}
+
+@keyframes d44-rotate {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+}

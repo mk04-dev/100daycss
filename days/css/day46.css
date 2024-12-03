@@ -1,0 +1,107 @@
+.day46 {
+  background-color: #27ae60;
+}
+.day46 circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dashoffset: 0;
+}
+.day46 .circle-1 {
+  stroke-width: 0.9;
+  stroke-dasharray: 0 2.425%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 0.2;
+  animation: d46-rotate-1 12s ease-in-out infinite;
+}
+.day46 .circle-2 {
+  stroke-width: 1.3;
+  stroke-dasharray: 0 3.88%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 0.4;
+  animation: d46-rotate-2 12s ease-in-out infinite;
+}
+.day46 .circle-3 {
+  stroke-width: 1.7;
+  stroke-dasharray: 0 5.335%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 0.6;
+  animation: d46-rotate-3 12s ease-in-out infinite;
+}
+.day46 .circle-4 {
+  stroke-width: 2.1;
+  stroke-dasharray: 0 6.79%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 0.8;
+  animation: d46-rotate-4 12s ease-in-out infinite;
+}
+.day46 .circle-5 {
+  stroke-width: 2.5;
+  stroke-dasharray: 0 8.245%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  animation: d46-rotate-5 12s ease-in-out infinite;
+}
+.day46 .circle-6 {
+  stroke-width: 2.9;
+  stroke-dasharray: 0 9.7%;
+  stroke: white;
+  transform-origin: 50% 50%;
+  opacity: 1.2;
+  animation: d46-rotate-6 12s ease-in-out infinite;
+}
+
+@keyframes d46-rotate-1 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(415deg) scale(2.2);
+  }
+}
+@keyframes d46-rotate-2 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(400deg) scale(1.7);
+  }
+}
+@keyframes d46-rotate-3 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(390deg) scale(1.4);
+  }
+}
+@keyframes d46-rotate-4 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(380deg) scale(1.2);
+  }
+}
+@keyframes d46-rotate-5 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(370deg) scale(1.1);
+  }
+}
+@keyframes d46-rotate-6 {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=day46.css.map */

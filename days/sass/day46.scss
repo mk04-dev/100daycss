@@ -1,0 +1,80 @@
+.day46 {
+	background-color: #27ae60;
+
+	circle {
+		fill: none;
+		stroke-linecap: round;
+		stroke-dashoffset: 0;
+	}
+
+	@for $i from 1 through 6 {
+		.circle-#{$i} {
+			stroke-width: 0.4 * $i + 0.5;
+			stroke-dasharray: 0 (percentage((($i - 1) * 3 + 5) / 100) * 0.485);
+			stroke: white;
+			transform-origin: 50% 50%;
+			opacity: $i * 0.2;
+			animation: d46-rotate-#{$i} 12s ease-in-out infinite;
+		}
+	}
+}
+
+@keyframes d46-rotate-1 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(415deg) scale(2.2);
+	}
+}
+
+@keyframes d46-rotate-2 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(400deg) scale(1.7);
+	}
+}
+
+@keyframes d46-rotate-3 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(390deg) scale(1.4);
+	}
+}
+
+@keyframes d46-rotate-4 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(380deg) scale(1.2);
+	}
+}
+
+@keyframes d46-rotate-5 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(370deg) scale(1.1);
+	}
+}
+
+@keyframes d46-rotate-6 {
+	0%,
+	100% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+}

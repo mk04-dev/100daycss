@@ -1,0 +1,61 @@
+.day52 {
+  background-color: #27ae60;
+}
+.day52 .wave {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-width: 0;
+  animation: d50-wave 4s ease-in-out infinite;
+}
+.day52 .wave:nth-child(1) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 0s;
+}
+.day52 .wave:nth-child(2) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 0.25s;
+}
+.day52 .wave:nth-child(3) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 0.5s;
+}
+.day52 .wave:nth-child(4) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 0.75s;
+}
+.day52 .wave:nth-child(5) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 1s;
+}
+.day52 .wave:nth-child(6) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 1.25s;
+}
+.day52 .wave:nth-child(7) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 1.5s;
+}
+.day52 .wave:nth-child(8) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 1.75s;
+}
+.day52 .wave:nth-child(9) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 2s;
+}
+.day52 .wave:nth-child(10) {
+  stroke-dasharray: 0 3.14;
+  animation-delay: 2.25s;
+}
+
+@keyframes d50-wave {
+  0%, 100% {
+    stroke-width: 0;
+  }
+  50% {
+    stroke-width: 2%;
+  }
+}
+
+/*# sourceMappingURL=day52.css.map */

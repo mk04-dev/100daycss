@@ -1,0 +1,58 @@
+.day50 {
+  background-color: #8E44AD;
+}
+.day50 .egg {
+  height: 30%;
+  aspect-ratio: 1/1.4;
+  background-color: white;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%;
+  animation: d50-egg 3s ease-in infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes d50-egg {
+  0% {
+    transform: translateY(-250%) scaleY(1.2);
+  }
+  18% {
+    transform: translateY(2%) scaleY(1);
+  }
+  20% {
+    transform: translateY(30%) scaleY(0.7);
+  }
+  25% {
+    transform: translateY(-20%) scaleY(1.1);
+  }
+  29% {
+    transform: translateY(0%) scaleY(0.9);
+  }
+  32% {
+    transform: translateY(0%) scaleY(1);
+  }
+  40% {
+    transform: translateY(0%) scaleY(1) rotateZ(5deg);
+  }
+  44% {
+    transform: translateY(0%) scaleY(1) rotateZ(-5deg);
+  }
+  48% {
+    transform: translateY(0%) scaleY(1) rotateZ(5deg);
+  }
+  52% {
+    transform: translateY(0%) scaleY(1) rotateZ(0);
+  }
+  58% {
+    transform: translateY(20%) scaleY(0.8);
+  }
+  62% {
+    transform: translateY(-10%) scaleY(1);
+  }
+  80%, 100% {
+    transform: translateY(250%) scaleY(1.2);
+  }
+}
+
+/*# sourceMappingURL=day50.css.map */
