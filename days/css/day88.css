@@ -1,0 +1,83 @@
+.day88 {
+  background-color: #2c3e50;
+}
+.day88 .candle {
+  position: absolute;
+  width: 16%;
+  height: 28%;
+  background-color: white;
+  border-radius: 0.25rem;
+}
+.day88 .candle::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  background-color: rgb(198, 210, 221);
+  border-radius: inherit;
+}
+.day88 .candle::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  right: 15%;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.day88 .candle .plate {
+  position: absolute;
+  width: 180%;
+  left: -40%;
+  height: 0.5rem;
+  background-color: #121b24;
+  bottom: -0.5rem;
+  border-radius: 1rem;
+}
+.day88 .candle .wick {
+  position: absolute;
+  width: 0.25rem;
+  height: 0.5rem;
+  top: -0.5rem;
+  left: calc(50% - 0.125rem);
+  background-color: goldenrod;
+}
+.day88 .candle .flame {
+  position: absolute;
+  background-color: rgb(255, 145, 0);
+  height: 1.75rem;
+  width: 1rem;
+  top: -2.25rem;
+  left: calc(50% - 0.5rem);
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem/1.5rem 1.5rem 0.5rem 0.5rem;
+  transform-origin: center bottom;
+  animation: d88-flame 4s ease-in-out infinite, d88-bright 8s ease-in-out infinite, d88-flame-size 12s ease-in-out infinite;
+}
+
+@keyframes d88-flame {
+  0%, 100% {
+    border-radius: 0.125rem 1rem 0.5rem 0.5rem/1.5rem 1.5rem 0.5rem 0.5rem;
+  }
+  50% {
+    border-radius: 1rem 0.125rem 0.5rem 0.5rem/1.5rem 1.5rem 0.5rem 0.5rem;
+  }
+}
+@keyframes d88-bright {
+  0%, 100% {
+    box-shadow: 0.25rem -0.5rem 1rem 0.875rem rgba(255, 145, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0.25rem -0.5rem 1rem 0.75rem rgba(255, 145, 0, 0.4);
+  }
+}
+@keyframes d88-flame-size {
+  0%, 100% {
+    transform: scaleY(0.9);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+}
+
+/*# sourceMappingURL=day88.css.map */

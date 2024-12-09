@@ -10,31 +10,49 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-
 		<title>100 Days css</title>
 	</head>
-	<body></body>
+	<body id="main" class="main">
+		<div class="main-circle"></div>
+		<div class="main-circle small"></div>
+	</body>
 	<script>
 		$(function () {
 			Array(100)
 				.fill(0)
 				.forEach((_, idx) => {
-					$("body").append(`<div id="day-item-${idx + 1}" class="day-item"></div>`);
+					$("body").append(
+						`<div id="day-item-${idx + 1}" class="day-item"></div>`
+					);
 				});
-			
-			function callback (entries, observer) {
+
+			function callback(entries, observer) {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						const idx = entry.target.id.split('-').at(-1);
+						const idx = entry.target.id.split("-").at(-1);
 						$(`#${entry.target.id}`).load(`./days/day${idx}.html`);
 						return;
 					}
-					$(`#${entry.target.id}`).empty()
-				})
+					$(`#${entry.target.id}`).empty();
+				});
 			}
-			const dayItems = document.querySelectorAll('.day-item');
+			const dayItems = document.querySelectorAll(".day-item");
 			const observer = new IntersectionObserver(callback);
-			dayItems.forEach(item => observer.observe(item))
+			dayItems.forEach((item) => observer.observe(item));
+
+			$(document).on("mousemove", function (e) {
+				const $circle = $(this).find(".main-circle");
+				$circle.css(
+					"transform",
+					`translate(${e.clientX - $circle.width() / 2}px, ${
+						e.clientY - $circle.height() / 2
+					}px)`
+				);
+			});
+			$(document).on("mouseleave", function (e) {
+				const $circle = $(this).find(".main-circle");
+				$circle.css("transform", `translate(0, 0)`);
+			});
 		});
 
 		function randomInt(max, sum) {
@@ -42,7 +60,7 @@
 		}
 	</script>
 	<style>
-		body {
+		body.main {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -50,19 +68,49 @@
 			max-width: 1400px;
 			margin: auto;
 			padding-top: 2rem;
+			background-color: rgb(15, 21, 48);
+			position: relative;
 		}
-		.day-item {
-			border: 1px solid rgb(212, 212, 212);
+		body.main .day-item {
+			border: 1px solid rgb(34, 43, 83);
 			border-radius: 8px;
 			width: min(90vw, 25rem);
-
 			aspect-ratio: 1/1;
 			overflow: auto;
 		}
-		/* .day-item::before {
-			content: "";
-			position: absolute;
-		} */
+		body.main .main-circle {
+			pointer-events: none;
+			position: fixed;
+			width: 3rem;
+			height: 3rem;
+			top: 0;
+			left: 0;
+			backdrop-filter: invert(1);
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0);
+			transition: all 0.4s ease-out;
+			transform: translate(0, 0);
+			z-index: 100;
+		}
+		body.main .main-circle.small {
+			width: 0.5rem;
+			height: 0.5rem;
+			top: 1.25rem;
+			left: 1.25rem;
+			transition: all 0.2s ease-out;
+		}
+		body.main:has(span:hover) .main-circle,
+		body.main:has(button:hover) .main-circle,
+		body.main:has(svg:hover) .main-circle {
+			width: 6rem;
+			height: 6rem;
+		}
+		body.main:has(span:hover) .main-circle.small,
+		body.main:has(button:hover) .main-circle.small,
+		body.main:has(svg:hover) .main-circle.small {
+			width: 0;
+			height: 0;
+		}
 
 		.text-ellipsis {
 			white-space: nowrap;

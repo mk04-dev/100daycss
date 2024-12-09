@@ -1,0 +1,85 @@
+.day81 {
+  background-color: #9b59b6;
+  width: 400px;
+  height: 400px;
+}
+.day81 .floor {
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  background-color: #49627c;
+}
+.day81 .ballMove {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  aspect-ratio: 1/1;
+  animation: d81-move 4s ease-out infinite both;
+}
+.day81 .ballMove .ballUp {
+  width: 100%;
+  height: 100%;
+  animation: d81-up 4s ease-out infinite both;
+}
+.day81 .ballMove .ballDown {
+  width: 100%;
+  height: 100%;
+  animation: d81-down 4s ease-in infinite both;
+}
+.day81 .ballMove .ball {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  animation: d81-ball 4s linear infinite both;
+}
+
+@keyframes d81-move {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes d81-up {
+  0%, 15% {
+    transform: translateY(0);
+  }
+  25%, 35% {
+    transform: translateY(-100px);
+  }
+  42%, 50% {
+    transform: translateY(-140px);
+  }
+  55%, 58% {
+    transform: translateY(-150px);
+  }
+  60%, 100% {
+    transform: translateY(-155px);
+  }
+}
+@keyframes d81-down {
+  0% {
+    transform: translateY(50px);
+  }
+  15%, 25% {
+    transform: translateY(calc(280px - 100%));
+  }
+  35%, 42% {
+    transform: translateY(calc(280px - 100% + 100px));
+  }
+  50%, 55% {
+    transform: translateY(calc(280px - 100% + 140px));
+  }
+  58%, 60% {
+    transform: translateY(calc(280px - 100% + 150px));
+  }
+  62%, 100% {
+    transform: translateY(calc(280px - 100% + 155px));
+  }
+}
+
+/*# sourceMappingURL=day81.css.map */

@@ -1,0 +1,224 @@
+.day63 {
+  background-color: #27ae60;
+}
+.day63 .circle {
+  position: absolute;
+  height: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px dotted white;
+  animation: d63 8s ease-in-out infinite both;
+  transform-origin: 50% 50%;
+}
+.day63 .circle.circle-1 {
+  animation-delay: 0.16s;
+  z-index: 49;
+}
+.day63 .circle.circle-2 {
+  animation-delay: 0.32s;
+  z-index: 48;
+}
+.day63 .circle.circle-3 {
+  animation-delay: 0.48s;
+  z-index: 47;
+}
+.day63 .circle.circle-4 {
+  animation-delay: 0.64s;
+  z-index: 46;
+}
+.day63 .circle.circle-5 {
+  animation-delay: 0.8s;
+  z-index: 45;
+}
+.day63 .circle.circle-6 {
+  animation-delay: 0.96s;
+  z-index: 44;
+}
+.day63 .circle.circle-7 {
+  animation-delay: 1.12s;
+  z-index: 43;
+}
+.day63 .circle.circle-8 {
+  animation-delay: 1.28s;
+  z-index: 42;
+}
+.day63 .circle.circle-9 {
+  animation-delay: 1.44s;
+  z-index: 41;
+}
+.day63 .circle.circle-10 {
+  animation-delay: 1.6s;
+  z-index: 40;
+}
+.day63 .circle.circle-11 {
+  animation-delay: 1.76s;
+  z-index: 39;
+}
+.day63 .circle.circle-12 {
+  animation-delay: 1.92s;
+  z-index: 38;
+}
+.day63 .circle.circle-13 {
+  animation-delay: 2.08s;
+  z-index: 37;
+}
+.day63 .circle.circle-14 {
+  animation-delay: 2.24s;
+  z-index: 36;
+}
+.day63 .circle.circle-15 {
+  animation-delay: 2.4s;
+  z-index: 35;
+}
+.day63 .circle.circle-16 {
+  animation-delay: 2.56s;
+  z-index: 34;
+}
+.day63 .circle.circle-17 {
+  animation-delay: 2.72s;
+  z-index: 33;
+}
+.day63 .circle.circle-18 {
+  animation-delay: 2.88s;
+  z-index: 32;
+}
+.day63 .circle.circle-19 {
+  animation-delay: 3.04s;
+  z-index: 31;
+}
+.day63 .circle.circle-20 {
+  animation-delay: 3.2s;
+  z-index: 30;
+}
+.day63 .circle.circle-21 {
+  animation-delay: 3.36s;
+  z-index: 29;
+}
+.day63 .circle.circle-22 {
+  animation-delay: 3.52s;
+  z-index: 28;
+}
+.day63 .circle.circle-23 {
+  animation-delay: 3.68s;
+  z-index: 27;
+}
+.day63 .circle.circle-24 {
+  animation-delay: 3.84s;
+  z-index: 26;
+}
+.day63 .circle.circle-25 {
+  animation-delay: 4s;
+  z-index: 25;
+}
+.day63 .circle.circle-26 {
+  animation-delay: 4.16s;
+  z-index: 24;
+}
+.day63 .circle.circle-27 {
+  animation-delay: 4.32s;
+  z-index: 23;
+}
+.day63 .circle.circle-28 {
+  animation-delay: 4.48s;
+  z-index: 22;
+}
+.day63 .circle.circle-29 {
+  animation-delay: 4.64s;
+  z-index: 21;
+}
+.day63 .circle.circle-30 {
+  animation-delay: 4.8s;
+  z-index: 20;
+}
+.day63 .circle.circle-31 {
+  animation-delay: 4.96s;
+  z-index: 19;
+}
+.day63 .circle.circle-32 {
+  animation-delay: 5.12s;
+  z-index: 18;
+}
+.day63 .circle.circle-33 {
+  animation-delay: 5.28s;
+  z-index: 17;
+}
+.day63 .circle.circle-34 {
+  animation-delay: 5.44s;
+  z-index: 16;
+}
+.day63 .circle.circle-35 {
+  animation-delay: 5.6s;
+  z-index: 15;
+}
+.day63 .circle.circle-36 {
+  animation-delay: 5.76s;
+  z-index: 14;
+}
+.day63 .circle.circle-37 {
+  animation-delay: 5.92s;
+  z-index: 13;
+}
+.day63 .circle.circle-38 {
+  animation-delay: 6.08s;
+  z-index: 12;
+}
+.day63 .circle.circle-39 {
+  animation-delay: 6.24s;
+  z-index: 11;
+}
+.day63 .circle.circle-40 {
+  animation-delay: 6.4s;
+  z-index: 10;
+}
+.day63 .circle.circle-41 {
+  animation-delay: 6.56s;
+  z-index: 9;
+}
+.day63 .circle.circle-42 {
+  animation-delay: 6.72s;
+  z-index: 8;
+}
+.day63 .circle.circle-43 {
+  animation-delay: 6.88s;
+  z-index: 7;
+}
+.day63 .circle.circle-44 {
+  animation-delay: 7.04s;
+  z-index: 6;
+}
+.day63 .circle.circle-45 {
+  animation-delay: 7.2s;
+  z-index: 5;
+}
+.day63 .circle.circle-46 {
+  animation-delay: 7.36s;
+  z-index: 4;
+}
+.day63 .circle.circle-47 {
+  animation-delay: 7.52s;
+  z-index: 3;
+}
+.day63 .circle.circle-48 {
+  animation-delay: 7.68s;
+  z-index: 2;
+}
+.day63 .circle.circle-49 {
+  animation-delay: 7.84s;
+  z-index: 1;
+}
+
+@keyframes d63 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-10rem, -10rem) scale(1);
+  }
+  100% {
+    transform: translate(-5rem, -5rem) scale(4);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=day63.css.map */

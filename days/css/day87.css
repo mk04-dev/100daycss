@@ -1,0 +1,89 @@
+.day87 {
+  background-color: #ffc902;
+}
+.day87 .ruby {
+  position: relative;
+  width: 190px;
+  height: 120px;
+}
+.day87 .ruby .top-left-left {
+  position: absolute;
+  border-style: solid;
+  border-width: 0 20px 40px 35px;
+  border-color: transparent transparent rgb(0, 171, 194) transparent;
+}
+.day87 .ruby .top-left {
+  position: absolute;
+  left: 55px;
+  border-style: solid;
+  border-width: 0 40px 40px 40px;
+  border-color: transparent transparent rgb(0, 225, 255) transparent;
+  z-index: 2;
+}
+.day87 .ruby .top-right-right {
+  position: absolute;
+  left: 135px;
+  border-style: solid;
+  border-width: 0 35px 40px 20px;
+  border-color: transparent transparent rgb(36, 229, 255) transparent;
+  z-index: 2;
+}
+.day87 .ruby .top-middle {
+  position: absolute;
+  left: 35px;
+  border-style: solid;
+  border-width: 40px 40px 0 20px;
+  border-color: rgb(0, 209, 236) transparent transparent transparent;
+}
+.day87 .ruby .top-right {
+  position: absolute;
+  left: 95px;
+  width: 60px;
+  height: 40px;
+  border-width: 40px 20px 0 40px;
+  background-color: rgb(103, 250, 255);
+  overflow: hidden;
+  z-index: 1;
+}
+.day87 .ruby .top-right .flash {
+  position: absolute;
+  height: 60px;
+  width: 0.25rem;
+  background-color: white;
+  transform: rotate(-40deg);
+  animation: d87-flash 4s ease-in-out infinite;
+}
+.day87 .ruby .bottom-left {
+  position: absolute;
+  border-style: solid;
+  border-width: 80px 0px 0 95px;
+  border-color: rgb(0, 156, 177) transparent transparent transparent;
+  transform: translateY(40px);
+}
+.day87 .ruby .bottom-middle {
+  position: absolute;
+  left: 55px;
+  border-style: solid;
+  border-width: 80px 40px 0 40px;
+  border-color: rgb(39, 215, 238) transparent transparent transparent;
+  transform: translateY(40px);
+}
+.day87 .ruby .bottom-right {
+  position: absolute;
+  left: 95px;
+  border-style: solid;
+  border-width: 80px 95px 0 0px;
+  border-color: rgb(15, 204, 230) transparent transparent transparent;
+  transform: translateY(40px);
+}
+
+@keyframes d87-flash {
+  0% {
+    transform: rotate(-40deg) translateX(0);
+  }
+  25%, 100% {
+    transform: rotate(-40deg) translateX(64px);
+  }
+}
+
+/*# sourceMappingURL=day87.css.map */

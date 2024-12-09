@@ -1,0 +1,166 @@
+.day67 {
+  background-color: #f5ce51;
+}
+.day67 .container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateY(-10deg) rotateZ(-10deg);
+}
+.day67 .umbrella-bottom {
+  position: absolute;
+  width: 5px;
+  height: 150px;
+  top: 100px;
+  left: 77px;
+  background-color: #6d6d6d;
+  transform-style: preserve-3d;
+  z-index: 2;
+  transform-origin: 50% 100%;
+  transform: translate3d(20px, -150px, -2px) rotateX(90deg);
+}
+.day67 .umbrella-top {
+  position: relative;
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: d67-umbrella 4s linear infinite;
+}
+.day67 .umbrella-top .shape {
+  position: absolute;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  top: 100px;
+  left: 77px;
+  border-width: 0 23px 100px 23px;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  transform-origin: 50% 0%;
+}
+.day67 .umbrella-top .shape:nth-child(2n+1) {
+  border-color: transparent transparent #d70606 transparent;
+}
+.day67 .umbrella-top .shape.shape-1 {
+  transform: rotateZ(0deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-2 {
+  transform: rotateZ(30deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-3 {
+  transform: rotateZ(60deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-4 {
+  transform: rotateZ(90deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-5 {
+  transform: rotateZ(120deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-6 {
+  transform: rotateZ(150deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-7 {
+  transform: rotateZ(180deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-8 {
+  transform: rotateZ(210deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-9 {
+  transform: rotateZ(240deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-10 {
+  transform: rotateZ(270deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-11 {
+  transform: rotateZ(300deg) rotateX(-30deg);
+}
+.day67 .umbrella-top .shape.shape-12 {
+  transform: rotateZ(330deg) rotateX(-30deg);
+}
+.day67 .shadow-bottom {
+  position: absolute;
+  width: 5px;
+  height: 150px;
+  top: 100px;
+  left: 77px;
+  z-index: 1;
+  background-color: rgba(88, 88, 88, 0.2);
+  transform-origin: 50% 100%;
+  transform: translate3d(20px, -150px, -151px) rotateZ(90deg);
+}
+.day67 .shadow-top {
+  position: relative;
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  animation: d67-shadow 4s linear infinite;
+}
+.day67 .shadow-top .shape {
+  position: absolute;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  top: 100px;
+  left: 77px;
+  border-width: 0 23px 100px 23px;
+  border-color: transparent transparent #c7a844 transparent;
+  border-style: solid;
+  transform-origin: 50% 0%;
+}
+.day67 .shadow-top .shape.shape-1 {
+  transform: rotateZ(0deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-2 {
+  transform: rotateZ(30deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-3 {
+  transform: rotateZ(60deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-4 {
+  transform: rotateZ(90deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-5 {
+  transform: rotateZ(120deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-6 {
+  transform: rotateZ(150deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-7 {
+  transform: rotateZ(180deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-8 {
+  transform: rotateZ(210deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-9 {
+  transform: rotateZ(240deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-10 {
+  transform: rotateZ(270deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-11 {
+  transform: rotateZ(300deg) rotateX(-30deg) translateY(-2px);
+}
+.day67 .shadow-top .shape.shape-12 {
+  transform: rotateZ(330deg) rotateX(-30deg) translateY(-2px);
+}
+
+@keyframes d67-umbrella {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes d67-shadow {
+  0%, 100% {
+    transform: translate3d(150px, -200px, -150px) rotateZ(0deg);
+  }
+  100% {
+    transform: translate3d(150px, -200px, -150px) rotateZ(360deg);
+  }
+}
+
+/*# sourceMappingURL=day67.css.map */

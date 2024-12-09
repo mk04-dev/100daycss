@@ -1,0 +1,81 @@
+.day90 {
+  background-color: #34495e;
+  perspective: 500px;
+}
+.day90 .loader {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(45deg);
+  transition: transform 0.4s ease-in-out;
+}
+.day90 .loader:hover {
+  transform: rotateX(-20deg) rotateY(45deg) translateY(-1rem);
+}
+.day90 .loader:hover .plane.bottom {
+  box-shadow: -1rem 1rem 1rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+.day90 .loader .plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transform-origin: center center;
+}
+.day90 .loader .plane:not(.top):not(.bottom):not(.fill-top)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(46, 204, 113, 0.8);
+  animation: d90-fill 4s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+.day90 .loader .plane.front {
+  transform: translateZ(-60px);
+}
+.day90 .loader .plane.back {
+  transform: translateZ(60px);
+}
+.day90 .loader .plane.left {
+  transform: rotateY(90deg) translateZ(-60px);
+}
+.day90 .loader .plane.right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+.day90 .loader .plane.bottom {
+  transform: rotateX(90deg) translateZ(-60px);
+  box-shadow: -0.5rem 0.5rem 1rem 0.25rem rgba(0, 0, 0, 0.3);
+  background-color: rgba(46, 204, 113, 0.8);
+  transition: box-shadow 0.4s ease-in-out;
+}
+.day90 .loader .plane.top {
+  transform: rotateX(90deg) translateZ(60px);
+  opacity: 0.2;
+}
+.day90 .loader .plane.fill-top {
+  transform: rotateX(90deg) translateZ(-60px);
+  background-color: rgba(46, 204, 113, 0.8);
+  animation: d90-fill-top 4s ease-in-out infinite alternate;
+}
+
+@keyframes d90-fill-top {
+  0%, 25% {
+    transform: rotateX(90deg) translateZ(-60px);
+  }
+  75%, 100% {
+    transform: rotateX(90deg) translateZ(60px);
+  }
+}
+@keyframes d90-fill {
+  0%, 25% {
+    transform: scaleY(0);
+  }
+  75%, 100% {
+    transform: scaleY(1);
+  }
+}
+
+/*# sourceMappingURL=day90.css.map */

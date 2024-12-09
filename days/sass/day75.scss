@@ -1,0 +1,51 @@
+$num: 9;
+$deg: calc(180deg / $num);
+.day75 {
+	background-color: #d33526;
+
+	.container {
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+        animation: d75-container 8s ease-in-out infinite;
+
+        &:hover .circle {
+            opacity: 0.3;
+        }
+	}
+
+	.circle {
+        top: 20%;
+        left: 20%;
+		height: 60%;
+		aspect-ratio: 1/1;
+        box-shadow: 0 0 12px 2px #e8a3ff;
+        background: linear-gradient(to bottom, #d245ff, #8c8cfb);
+        position: absolute;
+		border-radius: 50%;
+        transition: opacity 0.4s ease-in-out;
+
+		@for $i from 1 through $num {
+			&.circle-#{$i} {
+				transform: rotateY($deg * ($i - 1));
+			}
+		}
+	}
+}
+@keyframes d75-container {
+	0%, 100% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+	}
+    20% {
+        transform: rotateX(-20deg) rotateY(160deg) rotateZ(-70deg);
+    }
+    40% {
+        transform: rotateX(120deg) rotateY(0deg) rotateZ(-90deg);
+    }
+    60% {
+        transform: rotateX(-120deg) rotateY(0deg) rotateZ(-90deg);
+    }
+    80% {
+        transform: rotateX(120deg) rotateY(-40deg) rotateZ(-90deg);
+    }
+}

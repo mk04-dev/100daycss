@@ -1,0 +1,34 @@
+$rings: 10;
+$speed: 4s;
+.day72 {
+	background-color: black;
+
+	.ring {
+		position: absolute;
+		box-sizing: border-box;
+		height: 60%;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+
+		@for $i from 1 through $rings {
+			&.ring-#{$i} {
+				border: 1px solid white;
+				z-index: $i;
+				animation: d72-ring-#{$i} $speed ease-in-out infinite;
+			}
+			$step: 50% / $rings * $i;
+			@keyframes d72-ring-#{$i} {
+				#{$step} {
+					transform: rotateX(0) rotateY(0deg);
+				}
+				#{$step + (100% - $step) / 2} {
+					box-shadow: 4px 4px 12px 0 white;
+				}
+
+				100% {
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+		}
+	}
+}

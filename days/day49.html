@@ -14,18 +14,20 @@
 	</body>
 	<script>
 		$(".day49").on("mousemove", function (e) {
+			e.stopPropagation();
+			const d49W = $(".day49").width();
+			const d49H = $(".day49").height();
 			const $circle = $(this).find(".circle");
-			$circle.css("top", 0);
-			$circle.css("left", 0);
 			$circle.css(
 				"transform",
-				`translate3d(${e.offsetX}px, ${e.offsetY}px, 0)`
+				`translate3d(${e.offsetX - d49W / 2 + $circle.width() / 2}px, ${
+					e.offsetY - d49H / 2 + $circle.height() / 2
+				}px, 0)`
 			);
 		});
 		$(".day49").on("mouseleave", function (e) {
+			e.stopPropagation();
 			const $circle = $(this).find(".circle");
-			$circle.css("top", "calc(50% - 1.5rem / 2)");
-			$circle.css("left", "calc(50% - 1.5rem / 2)");
 			$circle.css("transform", `translate3d(0, 0, 0)`);
 		});
 	</script>

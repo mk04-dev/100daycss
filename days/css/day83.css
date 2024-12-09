@@ -1,0 +1,265 @@
+.day83 {
+  background-color: #1e3242;
+}
+.day83 .sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.day83 .sparkles.sparkles-1 {
+  transform: rotateZ(170deg) scale(0.2);
+  animation: sparkles-1 2s cubic-bezier(1, 0.19, 0.93, 0.7) 0s infinite both;
+}
+@keyframes sparkles-1 {
+  0% {
+    transform: rotateZ(170deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(170deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-2 {
+  transform: rotateZ(76deg) scale(0.2);
+  animation: sparkles-2 2s cubic-bezier(1, 0.19, 0.93, 0.7) -0.2s infinite both;
+}
+@keyframes sparkles-2 {
+  0% {
+    transform: rotateZ(76deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(76deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-3 {
+  transform: rotateZ(115deg) scale(0.2);
+  animation: sparkles-3 2s cubic-bezier(1, 0.19, 0.93, 0.7) -0.4s infinite both;
+}
+@keyframes sparkles-3 {
+  0% {
+    transform: rotateZ(115deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(115deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-4 {
+  transform: rotateZ(147deg) scale(0.2);
+  animation: sparkles-4 2s cubic-bezier(1, 0.19, 0.93, 0.7) -0.6s infinite both;
+}
+@keyframes sparkles-4 {
+  0% {
+    transform: rotateZ(147deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(147deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-5 {
+  transform: rotateZ(41deg) scale(0.2);
+  animation: sparkles-5 2s cubic-bezier(1, 0.19, 0.93, 0.7) -0.8s infinite both;
+}
+@keyframes sparkles-5 {
+  0% {
+    transform: rotateZ(41deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(41deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-6 {
+  transform: rotateZ(159deg) scale(0.2);
+  animation: sparkles-6 2s cubic-bezier(1, 0.19, 0.93, 0.7) -1s infinite both;
+}
+@keyframes sparkles-6 {
+  0% {
+    transform: rotateZ(159deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(159deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-7 {
+  transform: rotateZ(73deg) scale(0.2);
+  animation: sparkles-7 2s cubic-bezier(1, 0.19, 0.93, 0.7) -1.2s infinite both;
+}
+@keyframes sparkles-7 {
+  0% {
+    transform: rotateZ(73deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(73deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-8 {
+  transform: rotateZ(56deg) scale(0.2);
+  animation: sparkles-8 2s cubic-bezier(1, 0.19, 0.93, 0.7) -1.4s infinite both;
+}
+@keyframes sparkles-8 {
+  0% {
+    transform: rotateZ(56deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(56deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-9 {
+  transform: rotateZ(7deg) scale(0.2);
+  animation: sparkles-9 2s cubic-bezier(1, 0.19, 0.93, 0.7) -1.6s infinite both;
+}
+@keyframes sparkles-9 {
+  0% {
+    transform: rotateZ(7deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(7deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles.sparkles-10 {
+  transform: rotateZ(106deg) scale(0.2);
+  animation: sparkles-10 2s cubic-bezier(1, 0.19, 0.93, 0.7) -1.8s infinite both;
+}
+@keyframes sparkles-10 {
+  0% {
+    transform: rotateZ(106deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(106deg) scale(4);
+    opacity: 1;
+  }
+}
+.day83 .sparkles .sparkle {
+  position: absolute;
+  top: 0;
+  width: 0.25rem;
+  height: 100%;
+}
+.day83 .sparkles .sparkle::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  transform-origin: 50% 100%;
+}
+.day83 .sparkles .sparkle::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  transform-origin: 50% 0%;
+}
+.day83 .sparkles .sparkle.sparkle-1 {
+  transform: rotateZ(7deg);
+}
+.day83 .sparkles .sparkle.sparkle-1::before {
+  height: 3%;
+}
+.day83 .sparkles .sparkle.sparkle-1::after {
+  height: 10%;
+}
+.day83 .sparkles .sparkle.sparkle-2 {
+  transform: rotateZ(11deg);
+}
+.day83 .sparkles .sparkle.sparkle-2::before {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-2::after {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-3 {
+  transform: rotateZ(166deg);
+}
+.day83 .sparkles .sparkle.sparkle-3::before {
+  height: 10%;
+}
+.day83 .sparkles .sparkle.sparkle-3::after {
+  height: 1%;
+}
+.day83 .sparkles .sparkle.sparkle-4 {
+  transform: rotateZ(24deg);
+}
+.day83 .sparkles .sparkle.sparkle-4::before {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-4::after {
+  height: 2%;
+}
+.day83 .sparkles .sparkle.sparkle-5 {
+  transform: rotateZ(16deg);
+}
+.day83 .sparkles .sparkle.sparkle-5::before {
+  height: 9%;
+}
+.day83 .sparkles .sparkle.sparkle-5::after {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-6 {
+  transform: rotateZ(94deg);
+}
+.day83 .sparkles .sparkle.sparkle-6::before {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-6::after {
+  height: 8%;
+}
+.day83 .sparkles .sparkle.sparkle-7 {
+  transform: rotateZ(70deg);
+}
+.day83 .sparkles .sparkle.sparkle-7::before {
+  height: 1%;
+}
+.day83 .sparkles .sparkle.sparkle-7::after {
+  height: 3%;
+}
+.day83 .sparkles .sparkle.sparkle-8 {
+  transform: rotateZ(17deg);
+}
+.day83 .sparkles .sparkle.sparkle-8::before {
+  height: 2%;
+}
+.day83 .sparkles .sparkle.sparkle-8::after {
+  height: 4%;
+}
+.day83 .sparkles .sparkle.sparkle-9 {
+  transform: rotateZ(86deg);
+}
+.day83 .sparkles .sparkle.sparkle-9::before {
+  height: 5%;
+}
+.day83 .sparkles .sparkle.sparkle-9::after {
+  height: 3%;
+}
+.day83 .sparkles .sparkle.sparkle-10 {
+  transform: rotateZ(113deg);
+}
+.day83 .sparkles .sparkle.sparkle-10::before {
+  height: 5%;
+}
+.day83 .sparkles .sparkle.sparkle-10::after {
+  height: 5%;
+}
+
+/*# sourceMappingURL=day83.css.map */

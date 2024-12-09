@@ -1,0 +1,27 @@
+$speed: 0.4s;
+.day80 {
+	.container {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	.block {
+        position: relative;
+		background-color: #34495e;
+        flex: 1 1 auto;
+        width: 20%;
+		transition: all $speed ease-in-out;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+        cursor: pointer;
+		overflow: hidden;
+		&:nth-child(2n) {
+			background-color: #e67e22;
+		}
+
+		&:hover {
+			width: 100%;
+		}
+	}
+}

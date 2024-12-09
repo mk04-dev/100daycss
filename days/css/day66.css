@@ -1,0 +1,92 @@
+.day66 {
+  background-color: #5a717b;
+}
+.day66 .cb {
+  display: none;
+}
+.day66 .cb:checked ~ .toggle {
+  background-color: green;
+  border: 1.6rem solid white;
+}
+.day66 .cb:checked ~ .sparkles {
+  animation: d66-sparkles 0.3s ease-in-out 0.15s both;
+}
+.day66 .toggle {
+  position: absolute;
+  height: 4rem;
+  aspect-ratio: 1/1;
+  background-color: #5a717b;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.125rem solid white;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.day66 .sparkles {
+  position: absolute;
+  height: 8rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+.day66 .sparkles .sparkle {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+}
+.day66 .sparkles .sparkle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  border-radius: 2rem;
+}
+.day66 .sparkles .sparkle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  border-radius: 2rem;
+}
+.day66 .sparkles .sparkle.sparkle-1 {
+  rotate: 30deg;
+}
+.day66 .sparkles .sparkle.sparkle-2 {
+  rotate: 60deg;
+}
+.day66 .sparkles .sparkle.sparkle-3 {
+  rotate: 90deg;
+}
+.day66 .sparkles .sparkle.sparkle-4 {
+  rotate: 120deg;
+}
+.day66 .sparkles .sparkle.sparkle-5 {
+  rotate: 150deg;
+}
+.day66 .sparkles .sparkle.sparkle-6 {
+  rotate: 180deg;
+}
+
+@keyframes d66-sparkles {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=day66.css.map */

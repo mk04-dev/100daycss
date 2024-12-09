@@ -1,0 +1,62 @@
+$circle: 3rem;
+$circleSmall: 0.5rem;
+
+body.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	max-width: 1400px;
+	margin: auto;
+	padding-top: 2rem;
+	background-color: rgb(15, 21, 48);
+	position: relative;
+
+	.day-item {
+		border: 1px solid rgb(34, 43, 83);
+		border-radius: 8px;
+		width: min(90vw, 25rem);
+		aspect-ratio: 1/1;
+		overflow: auto;
+	}
+	.main-circle {
+		pointer-events: none;
+		position: fixed;
+		width: $circle;
+		height: $circle;
+		top: 0;
+		left: 0;
+		backdrop-filter: invert(1);
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0);
+		transition: all 0.4s ease-out;
+		transform: translate(0, 0);
+		z-index: 100;
+        &.small {
+            width: $circleSmall;
+            height: $circleSmall;
+            top: calc(($circle - $circleSmall) / 2);
+            left: calc(($circle - $circleSmall) / 2);
+            transition: all 0.2s ease-out;
+        }
+	}
+
+	&:has(span:hover),
+    &:has(button:hover),
+    &:has(svg:hover) {
+		.main-circle {
+			width: $circle * 2;
+			height: $circle * 2;
+			&.small {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+}
+
+.text-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

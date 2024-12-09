@@ -1,0 +1,55 @@
+body.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 2rem;
+  background-color: rgb(15, 21, 48);
+  position: relative;
+}
+body.main .day-item {
+  border: 1px solid rgb(34, 43, 83);
+  border-radius: 8px;
+  width: min(90vw, 25rem);
+  aspect-ratio: 1/1;
+  overflow: auto;
+}
+body.main .main-circle {
+  pointer-events: none;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  backdrop-filter: invert(1);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.4s ease-out;
+  transform: translate(0, 0);
+  z-index: 100;
+}
+body.main .main-circle.small {
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 1.25rem;
+  left: 1.25rem;
+  transition: all 0.2s ease-out;
+}
+body.main:has(span:hover) .main-circle, body.main:has(button:hover) .main-circle, body.main:has(svg:hover) .main-circle {
+  width: 6rem;
+  height: 6rem;
+}
+body.main:has(span:hover) .main-circle.small, body.main:has(button:hover) .main-circle.small, body.main:has(svg:hover) .main-circle.small {
+  width: 0;
+  height: 0;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=index.css.map */

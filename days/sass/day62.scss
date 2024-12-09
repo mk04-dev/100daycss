@@ -1,0 +1,164 @@
+$color: #5e5e5e;
+$color2: rgb(235, 235, 235);
+$speed: 0.3s;
+
+.day62 {
+	background-color: #e9edef;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		flex: 1;
+		height: -webkit-fill-available;
+
+		.plans {
+			flex: 1;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			gap: 0.75rem;
+			padding: 1rem 1rem 2rem 1rem;
+
+			.plan {
+				flex: 1;
+				height: 100%;
+				background-color: white;
+				border-radius: 0.25rem;
+				box-shadow: 0.125rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+				cursor: pointer;
+				transition: all $speed ease-in-out;
+                overflow: hidden;
+
+				&:hover {
+					transform: scale(1.1);
+					box-shadow: 0.125rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+					
+                    .title {
+						background-color: #4eb8df;
+					}
+
+					.price {
+						color: #4eb8df;
+					}
+				}
+
+				.title {
+					text-align: center;
+					background-color: #7dd0ed;
+					padding: 0.5rem;
+					color: white;
+					font-weight: bold;
+					transition: background-color $speed ease-in-out;
+				}
+
+				.price {
+					display: flex;
+					flex-direction: column;
+					font-size: 1.8em;
+					font-weight: bold;
+					text-align: center;
+					color: $color;
+					transition: color $speed ease-in-out;
+
+					span {
+						font-size: 0.4em;
+						font-weight: 300;
+					}
+				}
+				.lines {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					gap: 0.375rem;
+					.line {
+						height: 0.1875rem;
+						background-color: rgb(223, 223, 223);
+					}
+				}
+			}
+		}
+
+        &:has(.plan.basic:hover) {
+            .datas {
+                .users .line .fill{
+                    width: 5%;
+                }
+                .gb .line .fill{
+                    width: 5%;
+                }
+                .projects .line .fill{
+                    width: 5%;
+                }
+            }
+        }
+
+        &:has(.plan.pro:hover) {
+            .datas {
+                .users .line .fill{
+                    width: 40%;
+                }
+                .gb .line .fill{
+                    width: 60%;
+                }
+                .projects .line .fill{
+                    width: 30%;
+                }
+            }
+        }
+
+        &:has(.plan.premium:hover) {
+            .datas {
+                .users .line .fill{
+                    width: 100%;
+                }
+                .gb .line .fill{
+                    width: 100%;
+                }
+                .projects .line .fill{
+                    width: 100%;
+                }
+            }
+        }
+		.datas {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			background-color: white;
+			box-shadow: 0.125rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+			padding: 1rem;
+
+			.data {
+				flex: 1;
+				color: $color;
+				font-size: 0.85em;
+				display: flex;
+				flex-direction: column;
+				gap: 0.25rem;
+				.text {
+					display: flex;
+					justify-content: space-between;
+				}
+				.line {
+					position: relative;
+					height: 0.625rem;
+					border-radius: 2rem;
+					background-color: $color2;
+					overflow: hidden;
+				}
+
+				.fill {
+					position: absolute;
+					height: 100%;
+                    width: 0;
+					background-color: #7dd0ed;
+					transition: width $speed ease-in-out;
+				}
+			}
+		}
+	}
+}
