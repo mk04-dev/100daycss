@@ -1,190 +1,90 @@
-$speed: 3s;
-$speed-2: 1.75s;
-$size: 0.75rem;
-$start: 0px;
-$center: calc(200px - $size);
-$end: 400px;
+$size: 120px;
+$color: rgba(0, 0, 0, 0.1);
+$colorF: rgba(46, 204, 113, 0.8);
 .day91 {
-	background-color: #27ae60;
+	background-color: #34495e;
+    perspective: 500px;
 
-	.ball {
-		top: 0;
-		left: 0;
-		position: absolute;
+	.loader {
 		width: $size;
 		height: $size;
-		background-color: white;
-		border-radius: 50%;
-		animation-duration: $speed;
-		animation-timing-function: linear;
-		animation-fill-mode: both;
-		animation-iteration-count: infinite;
-		animation-direction: alternate-reverse;
+		transform-style: preserve-3d;
+		transform: rotateX(-20deg) rotateY(45deg);
+        transition: transform 0.4s ease-in-out;
+        &:hover {
+            transform: rotateX(-20deg) rotateY(45deg) translateY(-1rem);
 
-		&.ball-1 {
-			animation-name: d91-tc-bl;
+            .plane.bottom {
+				box-shadow: -1rem 1rem 1rem 0.75rem rgba(0, 0, 0, 0.3);
+            }
+        }
+		.plane {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: $size;
+			height: $size;
+			background-color: $color;
+			transform-origin: center center;
+            
+			&:not(.top):not(.bottom):not(.fill-top)::before {
+				content: "";
+				display: block;
+				position: absolute;
+				inset: 0;
+				background-color: $colorF;
+				animation: d90-fill 4s ease-in-out infinite alternate;
+				transform-origin: center bottom;
+			}
+			&.front {
+				transform: translateZ(-$size / 2);
+			}
+			&.back {
+				transform: translateZ($size / 2);
+			}
+			&.left {
+				transform: rotateY(90deg) translateZ(-$size / 2);
+			}
+			&.right {
+				transform: rotateY(90deg) translateZ($size / 2);
+			}
+			&.bottom {
+				transform: rotateX(90deg) translateZ(-$size / 2);
+				box-shadow: -0.5rem 0.5rem 1rem 0.25rem rgba(0, 0, 0, 0.3);
+				background-color: $colorF;
+                transition: box-shadow 0.4s ease-in-out
+			}
+			&.top {
+				transform: rotateX(90deg) translateZ($size / 2);
+                opacity: 0.2;
+			}
+
+			&.fill-top {
+				transform: rotateX(90deg) translateZ(-$size / 2);
+				background-color: $colorF;
+				animation: d90-fill-top 4s ease-in-out infinite alternate;
+			}
 		}
-		&.ball-2 {
-			animation-name: d91-tc-br;
-		}
-		&.ball-3 {
-			animation-name: d91-rc-tl;
-		}
-		&.ball-4 {
-			animation-name: d91-rc-bl;
-		}
-		&.ball-5 {
-			animation-name: d91-bc-tl;
-		}
-		&.ball-6 {
-			animation-name: d91-bc-tr;
-		}
-		&.ball-7 {
-			animation-name: d91-lc-tr;
-		}
-		&.ball-8 {
-			animation-name: d91-lc-br;
-		}
-		&.ball-9 {
-			animation-name: d91-tc-lc;
-			animation-duration: $speed-2;
-		}
-		&.ball-10 {
-			animation-name: d91-tc-lc;
-			animation-direction: alternate;
-			animation-duration: $speed-2;
-		}
-		&.ball-11 {
-			animation-name: d91-tc-rc;
-			animation-duration: $speed-2;
-		}
-		&.ball-12 {
-			animation-name: d91-tc-rc;
-			animation-direction: alternate;
-			animation-duration: $speed-2;
-		}
-		&.ball-13 {
-			animation-name: d91-bc-lc;
-			animation-duration: $speed-2;
-		}
-		&.ball-14 {
-			animation-name: d91-bc-lc;
-			animation-direction: alternate;
-			animation-duration: $speed-2;
-		}
-		&.ball-15 {
-			animation-name: d91-bc-rc;
-			animation-duration: $speed-2;
-		}
-		&.ball-16 {
-			animation-name: d91-bc-rc;
-			animation-direction: alternate;
-			animation-duration: $speed-2;
-		}
-	}
-}
-@keyframes d91-tc-bl {
-	0% {
-		transform: translate($center, $start);
-	}
-	100% {
-		transform: translate($start, $end);
-	}
-}
-@keyframes d91-tc-br {
-	0% {
-		transform: translate($center, $start);
-	}
-	100% {
-		transform: translate($end, $end);
 	}
 }
 
-@keyframes d91-rc-tl {
-	0% {
-		transform: translate($end, $center);
+@keyframes d90-fill-top {
+	0%,
+	25% {
+		transform: rotateX(90deg) translateZ(-$size / 2);
 	}
+	75%,
 	100% {
-		transform: translate($start, $start);
+		transform: rotateX(90deg) translateZ($size / 2);
 	}
 }
-
-@keyframes d91-rc-bl {
-	0% {
-		transform: translate($end, $center);
+@keyframes d90-fill {
+	0%,
+	25% {
+		transform: scaleY(0);
 	}
+	75%,
 	100% {
-		transform: translate($start, $end);
-	}
-}
-
-@keyframes d91-bc-tl {
-	0% {
-		transform: translate($center, $end);
-	}
-	100% {
-		transform: translate($start, $start);
-	}
-}
-
-@keyframes d91-bc-tr {
-	0% {
-		transform: translate($center, $end);
-	}
-	100% {
-		transform: translate($end, $start);
-	}
-}
-
-@keyframes d91-lc-tr {
-	0% {
-		transform: translate($start, $center);
-	}
-	100% {
-		transform: translate($end, $start);
-	}
-}
-
-@keyframes d91-lc-br {
-	0% {
-		transform: translate($start, $center);
-	}
-	100% {
-		transform: translate($end, $end);
-	}
-}
-
-@keyframes d91-tc-lc {
-	0% {
-		transform: translate($center, $start);
-	}
-	100% {
-		transform: translate($start, $center);
-	}
-}
-
-@keyframes d91-tc-rc {
-	0% {
-		transform: translate($center, $start);
-	}
-	100% {
-		transform: translate($end, $center);
-	}
-}
-
-@keyframes d91-bc-lc {
-	0% {
-		transform: translate($center, $end);
-	}
-	100% {
-		transform: translate($start, $center);
-	}
-}
-@keyframes d91-bc-rc {
-	0% {
-		transform: translate($center, $end);
-	}
-	100% {
-		transform: translate($end, $center);
+		transform: scaleY(1);
 	}
 }

@@ -1,0 +1,182 @@
+.day13 {
+  background-color: white;
+}
+.day13 .profiles {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.day13 .profiles .profile {
+  position: relative;
+  width: 194px;
+  height: 194px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.day13 .profiles .profile:hover .overlay {
+  opacity: 1;
+}
+.day13 .profiles .profile:hover .plus {
+  opacity: 1;
+  transform: scale(1);
+}
+.day13 .profiles .profile .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.day13 .profiles .profile .plus {
+  position: absolute;
+  background-color: rgb(252, 98, 98);
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.day13 .profiles .profile .plus:hover {
+  background-color: white;
+}
+.day13 .profiles .profile .plus:hover::before, .day13 .profiles .profile .plus:hover::after {
+  background-color: rgb(252, 98, 98);
+}
+.day13 .profiles .profile .plus::before, .day13 .profiles .profile .plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 0.125rem;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+.day13 .profiles .profile .plus::after {
+  width: 0.125rem;
+  height: 30%;
+}
+.day13 .detail {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+.day13 .detail .close {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgb(252, 98, 98);
+  transition: all 0.4s ease-in-out, transform 0.5s ease-in-out;
+  cursor: pointer;
+  transform: translate(-1rem, -100%);
+}
+.day13 .detail .close:hover {
+  background-color: white;
+}
+.day13 .detail .close:hover::after, .day13 .detail .close:hover::before {
+  background-color: rgb(252, 98, 98);
+}
+.day13 .detail .close::before, .day13 .detail .close::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 0.125rem;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+.day13 .detail .close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.day13 .detail .header {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out 0.2s;
+}
+.day13 .detail .image {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-sizing: border-box;
+  top: 45%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -300px);
+  transition: transform 0.5s ease-in-out;
+}
+.day13 .detail .image img {
+  width: 100%;
+}
+.day13 .detail .infos {
+  flex: 1;
+  background-color: rgb(252, 98, 98);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out 0.2s;
+}
+.day13 .detail .infos .name {
+  font-size: x-large;
+}
+.day13 .detail .infos .action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.day13 .detail .infos .action .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.day13 .detail .infos .action .btn:hover {
+  background-color: white;
+  color: rgb(252, 98, 98);
+}
+.day13 .detail.active {
+  pointer-events: all;
+}
+.day13 .detail.active .header,
+.day13 .detail.active .infos {
+  transform: translate(0);
+  transition-delay: 0s;
+}
+.day13 .detail.active .close {
+  transform: translate(-1rem, 1rem);
+  transition-delay: 0.2s;
+}
+.day13 .detail.active .image {
+  transform: translate(-50%, -50%);
+  transition-delay: 0.2s;
+}
+
+/*# sourceMappingURL=day13.css.map */

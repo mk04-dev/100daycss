@@ -33,6 +33,7 @@
   height: 100%;
   background-color: white;
   border-radius: 50%;
+  transform-origin: center bottom;
   animation: d81-ball 4s linear infinite both;
 }
 
@@ -79,6 +80,26 @@
   }
   62%, 100% {
     transform: translateY(calc(280px - 100% + 155px));
+  }
+}
+@keyframes d81-ball {
+  0%, 14% {
+    transform: scaleY(1.15);
+  }
+  16% {
+    transform: scaleY(0.6);
+  }
+  25%, 34% {
+    transform: scaleY(1.1);
+  }
+  35% {
+    transform: scaleY(0.8);
+  }
+  42%, 49% {
+    transform: scaleY(1.05);
+  }
+  50% {
+    transform: scaleY(1);
   }
 }
 

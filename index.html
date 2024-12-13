@@ -30,7 +30,11 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						const idx = entry.target.id.split("-").at(-1);
-						$(`#${entry.target.id}`).load(`./days/day${idx}.html`);
+						$(`#${entry.target.id}`).load(`./days/day${idx}.html`, (res, status, xhr) => {
+							if (status == "error" ) {
+								$(`#${entry.target.id}`).remove()
+							}
+						});
 						return;
 					}
 					$(`#${entry.target.id}`).empty();

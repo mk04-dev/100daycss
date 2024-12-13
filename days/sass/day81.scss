@@ -33,8 +33,7 @@ $ground-h: 30%;
 			height: 100%;
 			background-color: white;
 			border-radius: 50%;
-			// top: 10%;
-			// right: -$size;
+			transform-origin: center bottom;
 			animation: d81-ball 4s linear infinite both;
 		}
 	}
@@ -84,18 +83,24 @@ $ground-h: 30%;
 		transform: translateY(calc(400px * 0.7 - 100% + 155px ));
     }
 }
-// @keyframes d81-ball {
-//     0% {
-//         transform: translate(400px, 40px);
-//     }
-//     20% {
-//         transform: translate(250px, calc(400px * 0.7 - 100%));
-//     }
-//     40%{
-//         transform: translate(150px, calc(400px * 0.5 - 100%));
-//     }
-//     60%, 100%  {
-//         transform: translate(75px, calc(400px * 0.7 - 100%));
-//     }
 
-// }
+@keyframes d81-ball {
+	0%, 14% {
+		transform: scaleY(1.15);
+	}
+	16% {
+		transform: scaleY(0.6);
+	}
+	25%, 34% {
+		transform: scaleY(1.1);
+	}
+	35% {
+		transform: scaleY(0.8);
+	}
+	42%, 49% {
+		transform: scaleY(1.05);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+}

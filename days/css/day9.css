@@ -1,0 +1,702 @@
+.day9 .moon {
+  position: absolute;
+  height: 16%;
+  aspect-ratio: 1/1;
+  background-color: #f6edbd;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem 0.125rem #f6edbd;
+  top: 10%;
+  left: 10%;
+}
+.day9 .moon .crater-1 {
+  position: absolute;
+  width: 15%;
+  top: 1%;
+  left: 4%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-2 {
+  position: absolute;
+  width: 6%;
+  top: 6%;
+  left: 8%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-3 {
+  position: absolute;
+  width: 19%;
+  top: 3%;
+  left: 24%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-4 {
+  position: absolute;
+  width: 9%;
+  top: 40%;
+  left: 12%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-5 {
+  position: absolute;
+  width: 14%;
+  top: 20%;
+  left: 25%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-6 {
+  position: absolute;
+  width: 19%;
+  top: 24%;
+  left: 42%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-7 {
+  position: absolute;
+  width: 8%;
+  top: 7%;
+  left: 21%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-8 {
+  position: absolute;
+  width: 13%;
+  top: 64%;
+  left: 8%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-9 {
+  position: absolute;
+  width: 11%;
+  top: 81%;
+  left: 18%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-10 {
+  position: absolute;
+  width: 5%;
+  top: 60%;
+  left: 80%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .moon .crater-11 {
+  position: absolute;
+  width: 24%;
+  top: 66%;
+  left: 44%;
+  aspect-ratio: 1/1;
+  background-color: #dfd397;
+  border-radius: 50%;
+}
+.day9 .front {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: large;
+  font-size: 18px;
+  font-weight: 100;
+  z-index: 4;
+}
+.day9 .front .temperature {
+  font-size: 2.8em;
+}
+.day9 .front .preview tr td:last-child {
+  text-align: right;
+}
+.day9 .hill-fg-1 {
+  position: absolute;
+  background-color: #303c5d;
+  height: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  bottom: 0;
+  transform: translate(-65%, 60%);
+  z-index: 3;
+}
+.day9 .hill-fg-2 {
+  position: absolute;
+  background-color: #303c5d;
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  bottom: 0;
+  transform: translate(0, 55%);
+  z-index: 3;
+}
+.day9 .hill-fg-3 {
+  position: absolute;
+  background-color: #303c5d;
+  height: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  bottom: 0;
+  transform: translate(65%, 60%);
+  z-index: 3;
+}
+.day9 .hill-bg-1 {
+  position: absolute;
+  background-color: #26314f;
+  height: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  transform: translate(-20%, 45%);
+  z-index: 2;
+}
+.day9 .hill-bg-2 {
+  position: absolute;
+  background-color: #26314f;
+  height: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  transform: translate(60%, 45%);
+  z-index: 2;
+}
+.day9 .drop-big-1, .day9 .drop-small-10, .day9 .drop-medium-10, .day9 .drop-small-9, .day9 .drop-medium-9, .day9 .drop-small-8, .day9 .drop-medium-8, .day9 .drop-small-7, .day9 .drop-medium-7, .day9 .drop-small-6, .day9 .drop-medium-6, .day9 .drop-small-5, .day9 .drop-medium-5, .day9 .drop-small-4, .day9 .drop-medium-4, .day9 .drop-small-3, .day9 .drop-medium-3, .day9 .drop-small-2, .day9 .drop-medium-2, .day9 .drop-small-1, .day9 .drop-medium-1 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 0.04s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 22%;
+  transform: rotate(15deg);
+  animation: d9-drop 2.8s linear 0s infinite both;
+}
+.day9 .drop-big-1:before, .day9 .drop-small-10:before, .day9 .drop-medium-10:before, .day9 .drop-small-9:before, .day9 .drop-medium-9:before, .day9 .drop-small-8:before, .day9 .drop-medium-8:before, .day9 .drop-small-7:before, .day9 .drop-medium-7:before, .day9 .drop-small-6:before, .day9 .drop-medium-6:before, .day9 .drop-small-5:before, .day9 .drop-medium-5:before, .day9 .drop-small-4:before, .day9 .drop-medium-4:before, .day9 .drop-small-3:before, .day9 .drop-medium-3:before, .day9 .drop-small-2:before, .day9 .drop-medium-2:before, .day9 .drop-small-1:before, .day9 .drop-medium-1:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-1:after, .day9 .drop-small-10:after, .day9 .drop-medium-10:after, .day9 .drop-small-9:after, .day9 .drop-medium-9:after, .day9 .drop-small-8:after, .day9 .drop-medium-8:after, .day9 .drop-small-7:after, .day9 .drop-medium-7:after, .day9 .drop-small-6:after, .day9 .drop-medium-6:after, .day9 .drop-small-5:after, .day9 .drop-medium-5:after, .day9 .drop-small-4:after, .day9 .drop-medium-4:after, .day9 .drop-small-3:after, .day9 .drop-medium-3:after, .day9 .drop-small-2:after, .day9 .drop-medium-2:after, .day9 .drop-small-1:after, .day9 .drop-medium-1:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-1 {
+  left: 77%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 0s infinite both;
+}
+.day9 .drop-small-1 {
+  left: 77%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 3s linear 0s infinite both;
+}
+.day9 .drop-big-2 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 1.8s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 62%;
+  transform: rotate(15deg);
+  animation: d9-drop 2.6s linear 0.4s infinite both;
+}
+.day9 .drop-big-2:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-2:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-2 {
+  left: 47%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 0.5s infinite both;
+}
+.day9 .drop-small-2 {
+  left: 24%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 3s linear 0.5s infinite both;
+}
+.day9 .drop-big-3 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.9s linear 1.8s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 56%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.2s linear 0.8s infinite both;
+}
+.day9 .drop-big-3:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-3:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-3 {
+  left: 29%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 1.5s linear 1s infinite both;
+}
+.day9 .drop-small-3 {
+  left: 37%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 2s linear 1s infinite both;
+}
+.day9 .drop-big-4 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 0.32s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 11%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.2s linear 1.2s infinite both;
+}
+.day9 .drop-big-4:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-4:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-4 {
+  left: 99%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 1.5s infinite both;
+}
+.day9 .drop-small-4 {
+  left: 76%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 4s linear 1.5s infinite both;
+}
+.day9 .drop-big-5 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 1.84s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 2%;
+  transform: rotate(15deg);
+  animation: d9-drop 2.8s linear 1.6s infinite both;
+}
+.day9 .drop-big-5:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-5:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-5 {
+  left: 65%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 2s infinite both;
+}
+.day9 .drop-small-5 {
+  left: 27%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 3s linear 2s infinite both;
+}
+.day9 .drop-big-6 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 0.16s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 42%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.2s linear 2s infinite both;
+}
+.day9 .drop-big-6:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-6:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-6 {
+  left: 5%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 2.5s infinite both;
+}
+.day9 .drop-small-6 {
+  left: 4%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 4s linear 2.5s infinite both;
+}
+.day9 .drop-big-7 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.9s linear 0.24s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 72%;
+  transform: rotate(15deg);
+  animation: d9-drop 2.2s linear 2.4s infinite both;
+}
+.day9 .drop-big-7:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-7:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-7 {
+  left: 73%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 1.5s linear 3s infinite both;
+}
+.day9 .drop-small-7 {
+  left: 35%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 4s linear 3s infinite both;
+}
+.day9 .drop-big-8 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 1.28s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 79%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.2s linear 2.8s infinite both;
+}
+.day9 .drop-big-8:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-8:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-8 {
+  left: 59%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 2.5s linear 3.5s infinite both;
+}
+.day9 .drop-small-8 {
+  left: 38%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 4s linear 3.5s infinite both;
+}
+.day9 .drop-big-9 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.9s linear 1.68s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 61%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.2s linear 3.2s infinite both;
+}
+.day9 .drop-big-9:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-9:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-9 {
+  left: 56%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 4s infinite both;
+}
+.day9 .drop-small-9 {
+  left: 34%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 4s linear 4s infinite both;
+}
+.day9 .drop-big-10 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(43, 117, 255);
+  animation: drop 0.8s linear 2s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 0%;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: rotate(15deg);
+  animation: d9-drop 1.4s linear 3.6s infinite both;
+}
+.day9 .drop-big-10:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  border-radius: 3px;
+}
+.day9 .drop-big-10:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+.day9 .drop-medium-10 {
+  left: 35%;
+  background-color: rgb(36, 82, 168);
+  z-index: 2;
+  animation: d9-drop-medium 3.5s linear 4.5s infinite both;
+}
+.day9 .drop-small-10 {
+  left: 67%;
+  background-color: rgb(4, 50, 136);
+  z-index: 1;
+  animation: d9-drop-small 3s linear 4.5s infinite both;
+}
+
+@keyframes d9-drop {
+  0% {
+    transform: rotate(15deg) translateY(-450px);
+  }
+  95% {
+    transform: rotate(15deg) translateY(-100px) scaleX(1) scaleY(1);
+  }
+  100% {
+    transform: rotate(15deg) translateY(-100px) scaleX(2) scaleY(0.4);
+  }
+}
+@keyframes d9-drop-medium {
+  from {
+    transform: rotate(15deg) translateY(-450px) scale(0.75);
+  }
+  to {
+    transform: rotate(15deg) translateY(0) scale(0.5);
+  }
+}
+@keyframes d9-drop-small {
+  from {
+    transform: rotate(15deg) translateY(-450px) scale(0.5);
+  }
+  to {
+    transform: rotate(15deg) translateY(0) scale(0.5);
+  }
+}
+
+/*# sourceMappingURL=day9.css.map */

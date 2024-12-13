@@ -1,4 +1,3 @@
-$speed: 0.4s;
 .day80 {
 	.container {
 		display: flex;
@@ -10,7 +9,7 @@ $speed: 0.4s;
 		background-color: #34495e;
         flex: 1 1 auto;
         width: 20%;
-		transition: all $speed ease-in-out;
+		transition: all 0.2s ease-in-out;
 		display: flex;
 		justify-content: center;
 		align-items: center;

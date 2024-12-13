@@ -13,8 +13,8 @@
 	position: absolute;
 	width: 25%;
 	aspect-ratio: 1/1;
-    border-radius: 50%;
-    border: 0.25rem solid white;
+	border-radius: 50%;
+	border: 0.25rem solid white;
 	animation: animate-ring 5s infinite ease-in-out;
 }
 .day16 .octagon,
@@ -108,7 +108,8 @@
 	rotate: 236deg;
 }
 @keyframes animate-round {
-	0%, 2% {
+	0%,
+	2% {
 		transform: translateY(-16rem);
 	}
 	8% {
@@ -120,26 +121,27 @@
 	15% {
 		transform: translateY(0) scaleY(1);
 	}
-	
-    20% {
+
+	20% {
 		transform: translateY(0) scale(1.2);
-    }
+	}
 	25%,
 	75% {
 		transform: translateY(0) scale(0);
 	}
-    82% {
-        transform: translateY(0) scale(1.2);
-    }
-    85% {
+	82% {
+		transform: translateY(0) scale(1.2);
+	}
+	85% {
 		transform: scale(0.9);
-    }
-    88%, 90% {
+	}
+	88%,
+	90% {
 		transform: scale(1);
-    }
-    96% {
+	}
+	96% {
 		transform: scale(1.2);
-    }
+	}
 	100% {
 		transform: scale(0);
 	}
@@ -156,12 +158,13 @@
 	36% {
 		transform: scale(0.9);
 	}
-    39%, 41% {
+	39%,
+	41% {
 		transform: scale(1);
-    }
-    46% {
+	}
+	46% {
 		transform: scale(1.2);
-    }
+	}
 	50%,
 	100% {
 		transform: scale(0);
@@ -179,12 +182,13 @@
 	61% {
 		transform: scale(0.9);
 	}
-    64%, 66% {
+	64%,
+	66% {
 		transform: scale(1);
-    }
-    71% {
+	}
+	71% {
 		transform: scale(1.2);
-    }
+	}
 	75%,
 	100% {
 		transform: scale(0);
@@ -192,7 +196,8 @@
 }
 
 @keyframes animate-oct-sparkle {
-	0%, 26% {
+	0%,
+	26% {
 		transform: scale(0);
 		opacity: 0;
 	}
@@ -207,7 +212,8 @@
 }
 
 @keyframes animate-tri-sparkle {
-	0%, 51% {
+	0%,
+	51% {
 		transform: scale(0);
 		opacity: 0;
 	}
@@ -222,19 +228,20 @@
 }
 
 @keyframes animate-ring {
-    0%, 75% {
+	0%,
+	75% {
 		opacity: 0;
-        transform: scale(0);
-    }
-    76% {
-        opacity: 1;
-    }
-    85% {
-        transform: scale(1.5);
-    }
-    88%,
-    100% {
-        transform: scale(1.5);
+		transform: scale(0);
+	}
+	76% {
+		opacity: 1;
+	}
+	85% {
+		transform: scale(1.5);
+	}
+	88%,
+	100% {
+		transform: scale(1.5);
 		opacity: 0;
-    }
+	}
 }
