@@ -74,38 +74,5 @@
 			<div class="drop-small-10"></div>
 		</div>
 	</body>
-	<script>
-		const stat = {
-			baseStr: 7,
-			baseIq: 4,
-			str: 7,
-			iq: 4,
-		};
-		function inc(stat, attr) {
-			stat[attr] += 4;
-			return stat;
-		}
-		function f1(stat) {
-			stat.str += 4;
-			stat.iq -= 1;
-			return stat;
-		}
-
-		function f2(stat) {
-			stat.str += 1;
-			stat.iq -= 1;
-			return stat;
-		}
-		const compose = (...functions) => {
-			return (input) => {
-				return functions.reduceRight((acc, fn) => {
-					return fn(acc);
-				}, input);
-			};
-		};
-
-		console.log(stat);
-		compose(f1, f2)(stat);
-		console.log(stat);
-	</script>
+	<script></script>
 </html>
